@@ -1,3 +1,4 @@
 #!/bin/sh
-export FLASK_APP=./app/index.py
+source venv/bin/activate
+export FLASK_APP=setup.py
 flask run -h 0.0.0.0
