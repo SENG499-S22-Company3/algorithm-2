@@ -13,7 +13,7 @@ Login to Heroku CLI:
 Add git remote:
 `git remote add heroku https://git.heroku.com/algorithm-2.git`
 
-Push to Heroku Production:
+Push to Heroku Production (ONLY PUSH FROM MAIN BRANCH):
 `git add ...`
 `git commit -m "..."`
 `git push heroku main`
