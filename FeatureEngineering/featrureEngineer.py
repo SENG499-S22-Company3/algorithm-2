@@ -53,7 +53,7 @@ def pre_process() -> DataFrame:
 
 def main() -> None:
     """Main function."""
-    parser = ArgumentParser(description="Preprocessing for algorithm 2 - ML method")
+    parser = ArgumentParser(description="Feature Engineering for algorithm 2 - ML method")
     parser.add_argument("-x", action="store", dest="xlsx", help="output data frame to .xlsx")
     parser.add_argument("-j", action="store", dest="json", help="output data frame to .json")
     parser.add_argument("-c", action="store", dest="csv", help="output data frame to .csv")
