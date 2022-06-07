@@ -64,6 +64,12 @@ def filter_data(data: list[dict]) -> list[dict]:
     return filtered_data
 
 
+def sort_by_year(data: list[dict]) -> list[dict]:
+    """Sorts a list of courses by date offered."""
+    keys = lambda d: (int(d["term"]), d["subject"], d["courseNumber"], d["sequenceNumber"])
+    return sorted(data, key=keys)
+
+
 def main() -> None:
     """Main function."""
     parser = ArgumentParser(description="Data Parser")
@@ -80,7 +86,7 @@ def main() -> None:
     output_dir = os.path.join(script_dir, "output")
 
     # Parse and filter the data
-    data = filter_data(parse_json(abs_in_file_path))
+    data = sort_by_year(filter_data(parse_json(abs_in_file_path)))
 
     # Create an output folder if one is missing
     if not os.path.exists(output_dir):
