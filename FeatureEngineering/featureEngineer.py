@@ -66,11 +66,11 @@ def main() -> None:
     df = pre_process()
 
     if args.xlsx:
-        df.to_excel(args.xlsx + ".xlsx")
+        df.to_excel(args.xlsx + ".xlsx", index=False)
     if args.json:
-        df.to_json(args.json + ".json")
+        df.to_json(args.json + ".json", index=False)
     if args.csv:
-        df.to_csv(args.csv + ".csv")
+        df.to_csv(args.csv + ".csv", index=False)
 
 
 if __name__ == "__main__":
