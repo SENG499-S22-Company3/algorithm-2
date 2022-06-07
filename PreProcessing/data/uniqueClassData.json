@@ -1,5 +1,995 @@
 [
     {
+        "id": 100652,
+        "term": "201709",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 68,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100661,
+        "term": "201709",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 117,
+        "enrollment": 102,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100670,
+        "term": "201709",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 180,
+        "enrollment": 165,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100678,
+        "term": "201709",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 16,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100679,
+        "term": "201709",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 54,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100932,
+        "term": "201709",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 217,
+        "enrollment": 194,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107550,
+        "term": "201709",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 83,
+        "enrollment": 78,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100933,
+        "term": "201709",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A03",
+        "maximumEnrollment": 150,
+        "enrollment": 90,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107551,
+        "term": "201709",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A04",
+        "maximumEnrollment": 50,
+        "enrollment": 22,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100952,
+        "term": "201709",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 154,
+        "enrollment": 132,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100976,
+        "term": "201709",
+        "subjectCourse": "CSC225",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 224,
+        "enrollment": 140,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100985,
+        "term": "201709",
+        "subjectCourse": "CSC226",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 127,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100991,
+        "term": "201709",
+        "subjectCourse": "CSC230",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 124,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 100992,
+        "term": "201709",
+        "subjectCourse": "CSC230",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 35,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101001,
+        "term": "201709",
+        "subjectCourse": "CSC320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 128,
+        "enrollment": 128,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101002,
+        "term": "201709",
+        "subjectCourse": "CSC320",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 42,
+        "enrollment": 41,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101010,
+        "term": "201709",
+        "subjectCourse": "CSC355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 86,
+        "enrollment": 78,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101011,
+        "term": "201709",
+        "subjectCourse": "CSC355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 18,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101020,
+        "term": "201709",
+        "subjectCourse": "CSC360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 87,
+        "enrollment": 74,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101021,
+        "term": "201709",
+        "subjectCourse": "CSC360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 28,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101025,
+        "term": "201709",
+        "subjectCourse": "CSC361",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 128,
+        "enrollment": 101,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101034,
+        "term": "201709",
+        "subjectCourse": "CSC370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 61,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101035,
+        "term": "201709",
+        "subjectCourse": "CSC370",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101415,
+        "term": "201709",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 154,
+        "enrollment": 108,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101427,
+        "term": "201709",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 154,
+        "enrollment": 125,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101436,
+        "term": "201709",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 94,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101437,
+        "term": "201709",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 10,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101444,
+        "term": "201709",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 111,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101452,
+        "term": "201709",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 151,
+        "enrollment": 132,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101460,
+        "term": "201709",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 165,
+        "enrollment": 148,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101472,
+        "term": "201709",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 128,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101483,
+        "term": "201709",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 108,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 101490,
+        "term": "201709",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 105,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 103055,
+        "term": "201709",
+        "subjectCourse": "SENG265",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 170,
+        "enrollment": 150,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 103056,
+        "term": "201709",
+        "subjectCourse": "SENG265",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 50,
+        "enrollment": 49,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 103068,
+        "term": "201709",
+        "subjectCourse": "SENG360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 78,
+        "enrollment": 62,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 103069,
+        "term": "201709",
+        "subjectCourse": "SENG360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 62,
+        "enrollment": 58,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 103076,
+        "term": "201709",
+        "subjectCourse": "SENG474",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 90,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104272,
+        "term": "201801",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105038,
+        "term": "201801",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 62,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107554,
+        "term": "201801",
+        "subjectCourse": "CSC111",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 40,
+        "enrollment": 20,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107472,
+        "term": "201801",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107555,
+        "term": "201801",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 130,
+        "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107471,
+        "term": "201801",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A03",
+        "maximumEnrollment": 119,
+        "enrollment": 103,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107556,
+        "term": "201801",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A04",
+        "maximumEnrollment": 96,
+        "enrollment": 85,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105028,
+        "term": "201801",
+        "subjectCourse": "CSC225",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 200,
+        "enrollment": 179,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107416,
+        "term": "201801",
+        "subjectCourse": "CSC226",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 174,
+        "enrollment": 108,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105268,
+        "term": "201801",
+        "subjectCourse": "CSC226",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 36,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104211,
+        "term": "201801",
+        "subjectCourse": "CSC230",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 168,
+        "enrollment": 138,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104379,
+        "term": "201801",
+        "subjectCourse": "CSC320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 104,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105030,
+        "term": "201801",
+        "subjectCourse": "CSC360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 135,
+        "enrollment": 119,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104384,
+        "term": "201801",
+        "subjectCourse": "CSC360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 16,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104289,
+        "term": "201801",
+        "subjectCourse": "CSC361",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 110,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105031,
+        "term": "201801",
+        "subjectCourse": "CSC370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 145,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104391,
+        "term": "201801",
+        "subjectCourse": "CSC460",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 8,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104752,
+        "term": "201801",
+        "subjectCourse": "CSC460",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 14,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104282,
+        "term": "201801",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 145,
+        "enrollment": 130,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104283,
+        "term": "201801",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 134,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104070,
+        "term": "201801",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 8,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104285,
+        "term": "201801",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 139,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104287,
+        "term": "201801",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 176,
+        "enrollment": 130,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104291,
+        "term": "201801",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 134,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104297,
+        "term": "201801",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 66,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104792,
+        "term": "201801",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 54,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104325,
+        "term": "201801",
+        "subjectCourse": "SENG265",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 130,
+        "enrollment": 115,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107421,
+        "term": "201801",
+        "subjectCourse": "SENG265",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104326,
+        "term": "201801",
+        "subjectCourse": "SENG310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 175,
+        "enrollment": 146,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104329,
+        "term": "201801",
+        "subjectCourse": "SENG321",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 5,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104330,
+        "term": "201801",
+        "subjectCourse": "SENG321",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 50,
+        "enrollment": 43,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105042,
+        "term": "201801",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 105043,
+        "term": "201801",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 60,
+        "enrollment": 50,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104331,
+        "term": "201801",
+        "subjectCourse": "SENG401",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 44,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 106174,
+        "term": "201801",
+        "subjectCourse": "SENG401",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107544,
+        "term": "201801",
+        "subjectCourse": "SENG468",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 107545,
+        "term": "201801",
+        "subjectCourse": "SENG468",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 104335,
+        "term": "201801",
+        "subjectCourse": "SENG474",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 60,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110794,
+        "term": "201805",
+        "subjectCourse": "CSC115",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 105,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110116,
+        "term": "201805",
+        "subjectCourse": "CSC225",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 66,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110117,
+        "term": "201805",
+        "subjectCourse": "CSC225",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 24,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111127,
+        "term": "201805",
+        "subjectCourse": "CSC226",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 93,
+        "enrollment": 87,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111128,
+        "term": "201805",
+        "subjectCourse": "CSC226",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 27,
+        "enrollment": 27,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110121,
+        "term": "201805",
+        "subjectCourse": "CSC230",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 94,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110126,
+        "term": "201805",
+        "subjectCourse": "CSC320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 105,
+        "enrollment": 91,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110099,
+        "term": "201805",
+        "subjectCourse": "CSC360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 57,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111325,
+        "term": "201805",
+        "subjectCourse": "CSC370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 61,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111300,
+        "term": "201805",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 99,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111301,
+        "term": "201805",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110933,
+        "term": "201805",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 130,
+        "enrollment": 80,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111304,
+        "term": "201805",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111305,
+        "term": "201805",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 87,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111364,
+        "term": "201805",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 97,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111431,
+        "term": "201805",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111366,
+        "term": "201805",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 65,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111306,
+        "term": "201805",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 43,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111435,
+        "term": "201805",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111307,
+        "term": "201805",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 91,
+        "enrollment": 74,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111309,
+        "term": "201805",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 47,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111313,
+        "term": "201805",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 92,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110309,
+        "term": "201805",
+        "subjectCourse": "SENG265",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 88,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111346,
+        "term": "201805",
+        "subjectCourse": "SENG275",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 69,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110046,
+        "term": "201805",
+        "subjectCourse": "SENG310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 75,
+        "enrollment": 63,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110047,
+        "term": "201805",
+        "subjectCourse": "SENG310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 40,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110051,
+        "term": "201805",
+        "subjectCourse": "SENG426",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 56,
+        "enrollment": 49,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110052,
+        "term": "201805",
+        "subjectCourse": "SENG426",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 18,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111298,
+        "term": "201805",
+        "subjectCourse": "SENG435",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 15,
+        "enrollment": 21,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110054,
+        "term": "201805",
+        "subjectCourse": "SENG440",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 62,
+        "enrollment": 53,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 111475,
+        "term": "201805",
+        "subjectCourse": "SENG440",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 14,
+        "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 110040,
+        "term": "201805",
+        "subjectCourse": "SENG499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 56,
+        "enrollment": 46,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14721,
+        "term": "200805",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 58,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 15484,
+        "term": "200805",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
         "id": 14691,
         "term": "200805",
         "subjectCourse": "CSC115",
@@ -69,6 +1059,78 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 10,
         "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14738,
+        "term": "200805",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 48,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14740,
+        "term": "200805",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 180,
+        "enrollment": 108,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14451,
+        "term": "200805",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 56,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14453,
+        "term": "200805",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 17,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14459,
+        "term": "200805",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14460,
+        "term": "200805",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 14472,
+        "term": "200805",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 32,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 15486,
+        "term": "200805",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 16,
         "partOfTerm": "1"
     },
     {
@@ -168,6 +1230,33 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 10,
         "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16678,
+        "term": "200809",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 68,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16685,
+        "term": "200809",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 68,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16686,
+        "term": "200809",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
         "partOfTerm": "1"
     },
     {
@@ -306,6 +1395,87 @@
         "partOfTerm": "1"
     },
     {
+        "id": 31439,
+        "term": "200809",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 62,
+        "enrollment": 58,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31440,
+        "term": "200809",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 60,
+        "enrollment": 37,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31452,
+        "term": "200809",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 24,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31454,
+        "term": "200809",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 59,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31463,
+        "term": "200809",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 55,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31464,
+        "term": "200809",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 31471,
+        "term": "200809",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 94,
+        "enrollment": 93,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16488,
+        "term": "200809",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 72,
+        "enrollment": 51,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16495,
+        "term": "200809",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 47,
+        "partOfTerm": "1"
+    },
+    {
         "id": 16574,
         "term": "200809",
         "subjectCourse": "SENG265",
@@ -339,6 +1509,51 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 15,
         "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16588,
+        "term": "200809",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 45,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 16589,
+        "term": "200809",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 414,
+        "term": "200901",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 415,
+        "term": "200901",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 421,
+        "term": "200901",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 12,
         "partOfTerm": "1"
     },
     {
@@ -456,6 +1671,78 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 25,
         "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 436,
+        "term": "200901",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 80,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 444,
+        "term": "200901",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 107,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 445,
+        "term": "200901",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 12,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 446,
+        "term": "200901",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 66,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 566,
+        "term": "200901",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 81,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 574,
+        "term": "200901",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 62,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 581,
+        "term": "200901",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 22,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 715,
+        "term": "200901",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 31,
         "partOfTerm": "1"
     },
     {
@@ -585,6 +1872,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 19055,
+        "term": "200905",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 54,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 17612,
+        "term": "200905",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
         "id": 20192,
         "term": "200905",
         "subjectCourse": "CSC115",
@@ -645,6 +1950,87 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19193,
+        "term": "200905",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 53,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19195,
+        "term": "200905",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 180,
+        "enrollment": 113,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19208,
+        "term": "200905",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 54,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19210,
+        "term": "200905",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 14,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7012,
+        "term": "200905",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 1,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19344,
+        "term": "200905",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 24,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19345,
+        "term": "200905",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 19357,
+        "term": "200905",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 32,
+        "enrollment": 29,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 17613,
+        "term": "200905",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 12,
         "partOfTerm": "1"
     },
     {
@@ -744,6 +2130,42 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 10,
         "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20784,
+        "term": "200909",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 57,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20790,
+        "term": "200909",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 90,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20791,
+        "term": "200909",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 6216,
+        "term": "200909",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 1,
+        "enrollment": 1,
         "partOfTerm": "1"
     },
     {
@@ -873,6 +2295,78 @@
         "partOfTerm": "1"
     },
     {
+        "id": 20930,
+        "term": "200909",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 148,
+        "enrollment": 113,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20942,
+        "term": "200909",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 40,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20944,
+        "term": "200909",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 76,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20945,
+        "term": "200909",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 78,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20946,
+        "term": "200909",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20947,
+        "term": "200909",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 90,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20949,
+        "term": "200909",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 72,
+        "enrollment": 64,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 20950,
+        "term": "200909",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 66,
+        "partOfTerm": "1"
+    },
+    {
         "id": 21249,
         "term": "200909",
         "subjectCourse": "SENG265",
@@ -924,6 +2418,33 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 6,
         "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34833,
+        "term": "201001",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 38,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34834,
+        "term": "201001",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34840,
+        "term": "201001",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 8,
         "partOfTerm": "1"
     },
     {
@@ -1044,6 +2565,78 @@
         "partOfTerm": "1"
     },
     {
+        "id": 34841,
+        "term": "201001",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 82,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34855,
+        "term": "201001",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 75,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34856,
+        "term": "201001",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 13,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34857,
+        "term": "201001",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 74,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34865,
+        "term": "201001",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 81,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34979,
+        "term": "201001",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 72,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34982,
+        "term": "201001",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 46,
+        "enrollment": 23,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 34994,
+        "term": "201001",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 33,
+        "partOfTerm": "1"
+    },
+    {
         "id": 35138,
         "term": "201001",
         "subjectCourse": "SENG265",
@@ -1086,6 +2679,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 30,
         "enrollment": 13,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 36453,
+        "term": "201001",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 36454,
+        "term": "201001",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 18,
         "partOfTerm": "1"
     },
     {
@@ -1140,6 +2751,24 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 21862,
+        "term": "201005",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 53,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 8870,
+        "term": "201005",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 2,
         "partOfTerm": "1"
     },
     {
@@ -1203,6 +2832,96 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 21875,
+        "term": "201005",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 54,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 21877,
+        "term": "201005",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 180,
+        "enrollment": 101,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 21880,
+        "term": "201005",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 51,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7620,
+        "term": "201005",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 9,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7622,
+        "term": "201005",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 70,
+        "enrollment": 23,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7623,
+        "term": "201005",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7629,
+        "term": "201005",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7630,
+        "term": "201005",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7634,
+        "term": "201005",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 34,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 8872,
+        "term": "201005",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 11,
         "partOfTerm": "1"
     },
     {
@@ -1302,6 +3021,42 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 6834,
+        "term": "201009",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 72,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 38850,
+        "term": "201009",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 25,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 6841,
+        "term": "201009",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 59,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 6842,
+        "term": "201009",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 7,
         "partOfTerm": "1"
     },
     {
@@ -1431,6 +3186,96 @@
         "partOfTerm": "1"
     },
     {
+        "id": 6990,
+        "term": "201009",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 148,
+        "enrollment": 110,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7002,
+        "term": "201009",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 30,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7003,
+        "term": "201009",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7004,
+        "term": "201009",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A03",
+        "maximumEnrollment": 8,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7006,
+        "term": "201009",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 59,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7149,
+        "term": "201009",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 56,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7150,
+        "term": "201009",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7157,
+        "term": "201009",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7167,
+        "term": "201009",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 72,
+        "enrollment": 56,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 7306,
+        "term": "201009",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 57,
+        "partOfTerm": "1"
+    },
+    {
         "id": 5272,
         "term": "201009",
         "subjectCourse": "SENG265",
@@ -1473,6 +3318,33 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 6,
         "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23437,
+        "term": "201101",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 36,
+        "enrollment": 30,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23438,
+        "term": "201101",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23444,
+        "term": "201101",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 13,
         "partOfTerm": "1"
     },
     {
@@ -1593,6 +3465,96 @@
         "partOfTerm": "1"
     },
     {
+        "id": 23445,
+        "term": "201101",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 62,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23573,
+        "term": "201101",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23574,
+        "term": "201101",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23575,
+        "term": "201101",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A03",
+        "maximumEnrollment": 10,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23576,
+        "term": "201101",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 78,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23584,
+        "term": "201101",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 126,
+        "enrollment": 65,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23599,
+        "term": "201101",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 60,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23606,
+        "term": "201101",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 46,
+        "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 39074,
+        "term": "201101",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 26,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 23737,
+        "term": "201101",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
         "id": 23889,
         "term": "201101",
         "subjectCourse": "SENG265",
@@ -1635,6 +3597,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 30,
         "enrollment": 16,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 40614,
+        "term": "201101",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 39336,
+        "term": "201101",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 25,
         "partOfTerm": "1"
     },
     {
@@ -1692,6 +3672,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 41883,
+        "term": "201105",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 76,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41094,
+        "term": "201105",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
         "id": 40819,
         "term": "201105",
         "subjectCourse": "CSC115",
@@ -1743,6 +3741,114 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 46,
         "enrollment": 21,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41724,
+        "term": "201105",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 73,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41725,
+        "term": "201105",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 145,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41865,
+        "term": "201105",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 71,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41125,
+        "term": "201105",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41867,
+        "term": "201105",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 40983,
+        "term": "201105",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41705,
+        "term": "201105",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 23,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41088,
+        "term": "201105",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41713,
+        "term": "201105",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 35,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 42372,
+        "term": "201105",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 20,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 42373,
+        "term": "201105",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 41091,
+        "term": "201105",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 20,
         "partOfTerm": "1"
     },
     {
@@ -1842,6 +3948,42 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11137,
+        "term": "201109",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 9597,
+        "term": "201109",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 12,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11144,
+        "term": "201109",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11145,
+        "term": "201109",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 7,
         "partOfTerm": "1"
     },
     {
@@ -1980,6 +4122,87 @@
         "partOfTerm": "1"
     },
     {
+        "id": 11267,
+        "term": "201109",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 148,
+        "enrollment": 145,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11275,
+        "term": "201109",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 38,
+        "enrollment": 35,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 10878,
+        "term": "201109",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 22,
+        "enrollment": 22,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11294,
+        "term": "201109",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 61,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11296,
+        "term": "201109",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 75,
+        "enrollment": 58,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 42865,
+        "term": "201109",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11413,
+        "term": "201109",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 70,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11416,
+        "term": "201109",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 75,
+        "enrollment": 48,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11418,
+        "term": "201109",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 52,
+        "partOfTerm": "1"
+    },
+    {
         "id": 10820,
         "term": "201109",
         "subjectCourse": "SENG265",
@@ -2021,6 +4244,33 @@
         "subjectCourse": "SENG435",
         "sequenceNumber": "A01",
         "maximumEnrollment": 5,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11933,
+        "term": "201201",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 10,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 28142,
+        "term": "201201",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 18,
+        "enrollment": 17,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11936,
+        "term": "201201",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
         "enrollment": 6,
         "partOfTerm": "1"
     },
@@ -2133,6 +4383,87 @@
         "partOfTerm": "1"
     },
     {
+        "id": 11944,
+        "term": "201201",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 89,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11945,
+        "term": "201201",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 82,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 12808,
+        "term": "201201",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 22,
+        "enrollment": 22,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 28719,
+        "term": "201201",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A03",
+        "maximumEnrollment": 12,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11947,
+        "term": "201201",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 87,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 11948,
+        "term": "201201",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 84,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 12067,
+        "term": "201201",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 12072,
+        "term": "201201",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 25,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 12083,
+        "term": "201201",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 35,
+        "partOfTerm": "1"
+    },
+    {
         "id": 14030,
         "term": "201201",
         "subjectCourse": "SENG265",
@@ -2175,6 +4506,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 30,
         "enrollment": 20,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 28327,
+        "term": "201201",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 28328,
+        "term": "201201",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 22,
         "partOfTerm": "1"
     },
     {
@@ -2229,6 +4578,60 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 12,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47309,
+        "term": "201205",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 79,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47308,
+        "term": "201205",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47332,
+        "term": "201205",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 17,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47333,
+        "term": "201205",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47334,
+        "term": "201205",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 10,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 28970,
+        "term": "201205",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 2,
         "partOfTerm": "1"
     },
     {
@@ -2292,6 +4695,195 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 60,
         "enrollment": 47,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30509,
+        "term": "201205",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 74,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47315,
+        "term": "201205",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30510,
+        "term": "201205",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 168,
+        "enrollment": 161,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47316,
+        "term": "201205",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30822,
+        "term": "201205",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 83,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45796,
+        "term": "201205",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30824,
+        "term": "201205",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 33,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45790,
+        "term": "201205",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47335,
+        "term": "201205",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 45,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30346,
+        "term": "201205",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 35,
+        "enrollment": 14,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30738,
+        "term": "201205",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30500,
+        "term": "201205",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 26,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47319,
+        "term": "201205",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46695,
+        "term": "201205",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 24,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46696,
+        "term": "201205",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 30741,
+        "term": "201205",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46684,
+        "term": "201209",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 113,
+        "enrollment": 104,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45588,
+        "term": "201209",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 7,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46691,
+        "term": "201209",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 115,
+        "enrollment": 102,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46692,
+        "term": "201209",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45301,
+        "term": "201209",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 11,
         "partOfTerm": "1"
     },
     {
@@ -2439,6 +5031,132 @@
         "partOfTerm": "1"
     },
     {
+        "id": 46814,
+        "term": "201209",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 186,
+        "enrollment": 166,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46822,
+        "term": "201209",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 45,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43007,
+        "term": "201209",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 25,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46839,
+        "term": "201209",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45149,
+        "term": "201209",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46841,
+        "term": "201209",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 92,
+        "enrollment": 82,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 45453,
+        "term": "201209",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46843,
+        "term": "201209",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 82,
+        "enrollment": 79,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47409,
+        "term": "201209",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46960,
+        "term": "201209",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 73,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44521,
+        "term": "201209",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 46962,
+        "term": "201209",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 63,
+        "enrollment": 62,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44522,
+        "term": "201209",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 3,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44523,
+        "term": "201209",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 65,
+        "enrollment": 57,
+        "partOfTerm": "1"
+    },
+    {
         "id": 46996,
         "term": "201209",
         "subjectCourse": "SENG265",
@@ -2481,6 +5199,33 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 6,
         "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44729,
+        "term": "201301",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 43,
+        "enrollment": 41,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 51417,
+        "term": "201301",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44730,
+        "term": "201301",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 15,
+        "enrollment": 7,
         "partOfTerm": "1"
     },
     {
@@ -2583,6 +5328,123 @@
         "partOfTerm": "1"
     },
     {
+        "id": 44736,
+        "term": "201301",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 101,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 48573,
+        "term": "201301",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44737,
+        "term": "201301",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 124,
+        "enrollment": 110,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43496,
+        "term": "201301",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 16,
+        "enrollment": 15,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44739,
+        "term": "201301",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 89,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49230,
+        "term": "201301",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43941,
+        "term": "201301",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 108,
+        "enrollment": 102,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49231,
+        "term": "201301",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43940,
+        "term": "201301",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 117,
+        "enrollment": 93,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44568,
+        "term": "201301",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 3,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43946,
+        "term": "201301",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 44570,
+        "term": "201301",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 3,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 43955,
+        "term": "201301",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 45,
+        "enrollment": 45,
+        "partOfTerm": "1"
+    },
+    {
         "id": 44417,
         "term": "201301",
         "subjectCourse": "SENG265",
@@ -2625,6 +5487,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 30,
         "enrollment": 26,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 50865,
+        "term": "201301",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 50866,
+        "term": "201301",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 40,
+        "enrollment": 31,
         "partOfTerm": "1"
     },
     {
@@ -2679,6 +5559,51 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 15,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56624,
+        "term": "201305",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 76,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56451,
+        "term": "201305",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56635,
+        "term": "201305",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 12,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56454,
+        "term": "201305",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 57610,
+        "term": "201305",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 5,
         "partOfTerm": "1"
     },
     {
@@ -2763,6 +5688,150 @@
         "partOfTerm": "1"
     },
     {
+        "id": 49349,
+        "term": "201305",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 32,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56310,
+        "term": "201305",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49350,
+        "term": "201305",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 86,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56481,
+        "term": "201305",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49351,
+        "term": "201305",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 175,
+        "enrollment": 164,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56483,
+        "term": "201305",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 8,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56484,
+        "term": "201305",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 85,
+        "enrollment": 76,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 57944,
+        "term": "201305",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 47989,
+        "term": "201305",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 57934,
+        "term": "201305",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49193,
+        "term": "201305",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 34,
+        "enrollment": 30,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56785,
+        "term": "201305",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 49344,
+        "term": "201305",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 42,
+        "enrollment": 42,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56787,
+        "term": "201305",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53196,
+        "term": "201305",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56757,
+        "term": "201305",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 40,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
         "id": 55741,
         "term": "201305",
         "subjectCourse": "SENG265",
@@ -2832,6 +5901,69 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 15,
         "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63317,
+        "term": "201309",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 125,
+        "enrollment": 106,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63318,
+        "term": "201309",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63324,
+        "term": "201309",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 127,
+        "enrollment": 119,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63325,
+        "term": "201309",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 8,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63333,
+        "term": "201309",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63334,
+        "term": "201309",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 63335,
+        "term": "201309",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 23,
         "partOfTerm": "1"
     },
     {
@@ -2970,6 +6102,132 @@
         "partOfTerm": "1"
     },
     {
+        "id": 62232,
+        "term": "201309",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 186,
+        "enrollment": 148,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62247,
+        "term": "201309",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 57,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62248,
+        "term": "201309",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 18,
+        "enrollment": 16,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62251,
+        "term": "201309",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 89,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62379,
+        "term": "201309",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62387,
+        "term": "201309",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 85,
+        "enrollment": 68,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62388,
+        "term": "201309",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62395,
+        "term": "201309",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 92,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62396,
+        "term": "201309",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62407,
+        "term": "201309",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 108,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62408,
+        "term": "201309",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 7,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62415,
+        "term": "201309",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 88,
+        "enrollment": 85,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62416,
+        "term": "201309",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 62548,
+        "term": "201309",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 95,
+        "partOfTerm": "1"
+    },
+    {
         "id": 59713,
         "term": "201309",
         "subjectCourse": "SENG265",
@@ -3003,6 +6261,33 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 40,
         "enrollment": 24,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 60077,
+        "term": "201401",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 34,
+        "enrollment": 28,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 60078,
+        "term": "201401",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 60090,
+        "term": "201401",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 15,
+        "enrollment": 15,
         "partOfTerm": "1"
     },
     {
@@ -3105,6 +6390,141 @@
         "partOfTerm": "1"
     },
     {
+        "id": 58468,
+        "term": "201401",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 103,
+        "enrollment": 102,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58469,
+        "term": "201401",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58481,
+        "term": "201401",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 128,
+        "enrollment": 110,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58482,
+        "term": "201401",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58483,
+        "term": "201401",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 115,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58484,
+        "term": "201401",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58492,
+        "term": "201401",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 112,
+        "enrollment": 110,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58493,
+        "term": "201401",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58925,
+        "term": "201401",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 136,
+        "enrollment": 117,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58926,
+        "term": "201401",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58935,
+        "term": "201401",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 64,
+        "enrollment": 56,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 58936,
+        "term": "201401",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 8,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53720,
+        "term": "201401",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53721,
+        "term": "201401",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 59097,
+        "term": "201401",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 55,
+        "partOfTerm": "1"
+    },
+    {
         "id": 56699,
         "term": "201401",
         "subjectCourse": "SENG265",
@@ -3144,6 +6564,24 @@
         "id": 56711,
         "term": "201401",
         "subjectCourse": "SENG321",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 19,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56715,
+        "term": "201401",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 56716,
+        "term": "201401",
+        "subjectCourse": "SENG371",
         "sequenceNumber": "A02",
         "maximumEnrollment": 30,
         "enrollment": 19,
@@ -3210,6 +6648,51 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64858,
+        "term": "201405",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 120,
+        "enrollment": 87,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64857,
+        "term": "201405",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 65004,
+        "term": "201405",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 15,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 65005,
+        "term": "201405",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64799,
+        "term": "201405",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 10,
         "partOfTerm": "1"
     },
     {
@@ -3285,6 +6768,132 @@
         "partOfTerm": "1"
     },
     {
+        "id": 53227,
+        "term": "201405",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 54,
+        "enrollment": 48,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64838,
+        "term": "201405",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53228,
+        "term": "201405",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 105,
+        "enrollment": 93,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64864,
+        "term": "201405",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53229,
+        "term": "201405",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 195,
+        "enrollment": 171,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64865,
+        "term": "201405",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53379,
+        "term": "201405",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 88,
+        "enrollment": 78,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 65824,
+        "term": "201405",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 17,
+        "enrollment": 15,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53381,
+        "term": "201405",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 25,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 65814,
+        "term": "201405",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 52856,
+        "term": "201405",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 42,
+        "enrollment": 37,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 53220,
+        "term": "201405",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 38,
+        "enrollment": 35,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64994,
+        "term": "201405",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64315,
+        "term": "201405",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 50,
+        "enrollment": 37,
+        "partOfTerm": "1"
+    },
+    {
         "id": 54682,
         "term": "201405",
         "subjectCourse": "SENG265",
@@ -3351,6 +6960,69 @@
         "id": 54632,
         "term": "201405",
         "subjectCourse": "SENG499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 12,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64235,
+        "term": "201409",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 175,
+        "enrollment": 135,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64236,
+        "term": "201409",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64243,
+        "term": "201409",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 134,
+        "enrollment": 117,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64244,
+        "term": "201409",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64252,
+        "term": "201409",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 17,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64253,
+        "term": "201409",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64254,
+        "term": "201409",
+        "subjectCourse": "ECE399",
         "sequenceNumber": "A01",
         "maximumEnrollment": 20,
         "enrollment": 12,
@@ -3501,6 +7173,150 @@
         "partOfTerm": "1"
     },
     {
+        "id": 64198,
+        "term": "201409",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 135,
+        "enrollment": 72,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64199,
+        "term": "201409",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 135,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64216,
+        "term": "201409",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 146,
+        "enrollment": 105,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64217,
+        "term": "201409",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64225,
+        "term": "201409",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 123,
+        "enrollment": 81,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64226,
+        "term": "201409",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 17,
+        "enrollment": 14,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64715,
+        "term": "201409",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 98,
+        "enrollment": 93,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64716,
+        "term": "201409",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64724,
+        "term": "201409",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 94,
+        "enrollment": 85,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64725,
+        "term": "201409",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 18,
+        "enrollment": 18,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64732,
+        "term": "201409",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 109,
+        "enrollment": 107,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64733,
+        "term": "201409",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64369,
+        "term": "201409",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 88,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64370,
+        "term": "201409",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64379,
+        "term": "201409",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 88,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 64386,
+        "term": "201409",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 88,
+        "partOfTerm": "1"
+    },
+    {
         "id": 67956,
         "term": "201409",
         "subjectCourse": "SENG265",
@@ -3645,6 +7461,132 @@
         "partOfTerm": "1"
     },
     {
+        "id": 68749,
+        "term": "201501",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 127,
+        "enrollment": 119,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68750,
+        "term": "201501",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68762,
+        "term": "201501",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 141,
+        "enrollment": 127,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68763,
+        "term": "201501",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68764,
+        "term": "201501",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 136,
+        "enrollment": 112,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68765,
+        "term": "201501",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68773,
+        "term": "201501",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 136,
+        "enrollment": 129,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68774,
+        "term": "201501",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68914,
+        "term": "201501",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 138,
+        "enrollment": 113,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68915,
+        "term": "201501",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68924,
+        "term": "201501",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 48,
+        "enrollment": 40,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 68925,
+        "term": "201501",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 69080,
+        "term": "201501",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 68,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 69081,
+        "term": "201501",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
         "id": 69843,
         "term": "201501",
         "subjectCourse": "SENG265",
@@ -3690,6 +7632,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 69859,
+        "term": "201501",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 30,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 69860,
+        "term": "201501",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 30,
+        "enrollment": 23,
+        "partOfTerm": "1"
+    },
+    {
         "id": 69864,
         "term": "201501",
         "subjectCourse": "SENG401",
@@ -3714,6 +7674,60 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 60,
         "enrollment": 53,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76100,
+        "term": "201505",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 125,
+        "enrollment": 94,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76099,
+        "term": "201505",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76117,
+        "term": "201505",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76118,
+        "term": "201505",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76273,
+        "term": "201505",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 74427,
+        "term": "201505",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 11,
         "partOfTerm": "1"
     },
     {
@@ -3777,6 +7791,150 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 60,
         "enrollment": 31,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73545,
+        "term": "201505",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 53,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 75960,
+        "term": "201505",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73546,
+        "term": "201505",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 125,
+        "enrollment": 105,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76106,
+        "term": "201505",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73547,
+        "term": "201505",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 164,
+        "enrollment": 143,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76107,
+        "term": "201505",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73556,
+        "term": "201505",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 88,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 74760,
+        "term": "201505",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 35,
+        "enrollment": 32,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76277,
+        "term": "201505",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 100,
+        "enrollment": 74,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73558,
+        "term": "201505",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 43,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 74625,
+        "term": "201505",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73531,
+        "term": "201505",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 55,
+        "enrollment": 48,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 75917,
+        "term": "201505",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 73538,
+        "term": "201505",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 61,
+        "enrollment": 58,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76110,
+        "term": "201505",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 3,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 75919,
+        "term": "201505",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 80,
+        "enrollment": 79,
         "partOfTerm": "1"
     },
     {
@@ -3849,6 +8007,159 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 25,
         "enrollment": 15,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 83926,
+        "term": "201509",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 128,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 80273,
+        "term": "201509",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78640,
+        "term": "201509",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 168,
+        "enrollment": 148,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78641,
+        "term": "201509",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78782,
+        "term": "201509",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 95,
+        "enrollment": 86,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78783,
+        "term": "201509",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 15,
+        "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78786,
+        "term": "201509",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 105,
+        "enrollment": 101,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78787,
+        "term": "201509",
+        "subjectCourse": "ECE350",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78794,
+        "term": "201509",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 138,
+        "enrollment": 118,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78795,
+        "term": "201509",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76835,
+        "term": "201509",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 137,
+        "enrollment": 127,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78799,
+        "term": "201509",
+        "subjectCourse": "ECE365",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 2,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78804,
+        "term": "201509",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 138,
+        "enrollment": 125,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78060,
+        "term": "201509",
+        "subjectCourse": "ECE370",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 76895,
+        "term": "201509",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 110,
+        "enrollment": 94,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 78959,
+        "term": "201509",
+        "subjectCourse": "ECE380",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 81573,
+        "term": "201509",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 98,
+        "enrollment": 98,
         "partOfTerm": "1"
     },
     {
@@ -3942,6 +8253,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 77559,
+        "term": "201601",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 15,
+        "enrollment": 1,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 77560,
+        "term": "201601",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 45,
+        "enrollment": 37,
+        "partOfTerm": "1"
+    },
+    {
         "id": 74086,
         "term": "201601",
         "subjectCourse": "SENG401",
@@ -3966,6 +8295,42 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 85,
         "enrollment": 67,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 85779,
+        "term": "201605",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 10,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 85769,
+        "term": "201605",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 85806,
+        "term": "201605",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 85395,
+        "term": "201605",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 5,
         "partOfTerm": "1"
     },
     {
@@ -4131,6 +8496,78 @@
         "partOfTerm": "1"
     },
     {
+        "id": 87407,
+        "term": "201609",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 134,
+        "enrollment": 132,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 91033,
+        "term": "201609",
+        "subjectCourse": "ECE241",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 6,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87414,
+        "term": "201609",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 141,
+        "enrollment": 134,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 86874,
+        "term": "201609",
+        "subjectCourse": "ECE255",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 11,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87420,
+        "term": "201609",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 142,
+        "enrollment": 134,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87421,
+        "term": "201609",
+        "subjectCourse": "ECE355",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 91713,
+        "term": "201609",
+        "subjectCourse": "ECE356",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 17,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 93052,
+        "term": "201609",
+        "subjectCourse": "ECE399",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 14,
+        "enrollment": 13,
+        "partOfTerm": "1"
+    },
+    {
         "id": 91674,
         "term": "201609",
         "subjectCourse": "CSC111",
@@ -4266,6 +8703,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 87434,
+        "term": "201701",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 45,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 90789,
+        "term": "201701",
+        "subjectCourse": "ECE455",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
         "id": 91678,
         "term": "201701",
         "subjectCourse": "CSC111",
@@ -4392,6 +8847,132 @@
         "partOfTerm": "1"
     },
     {
+        "id": 87458,
+        "term": "201701",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 140,
+        "enrollment": 122,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 92805,
+        "term": "201701",
+        "subjectCourse": "ECE300",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 7,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87459,
+        "term": "201701",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 142,
+        "enrollment": 133,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 86887,
+        "term": "201701",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 12,
+        "enrollment": 10,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87462,
+        "term": "201701",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 143,
+        "enrollment": 130,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 92989,
+        "term": "201701",
+        "subjectCourse": "ECE320",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87464,
+        "term": "201701",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 144,
+        "enrollment": 137,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 92990,
+        "term": "201701",
+        "subjectCourse": "ECE330",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 4,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87468,
+        "term": "201701",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 141,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 86964,
+        "term": "201701",
+        "subjectCourse": "ECE340",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 8,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 87479,
+        "term": "201701",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 77,
+        "enrollment": 71,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 86966,
+        "term": "201701",
+        "subjectCourse": "ECE360",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 3,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 88699,
+        "term": "201701",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 60,
+        "enrollment": 40,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 88700,
+        "term": "201701",
+        "subjectCourse": "ECE488",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 0,
+        "partOfTerm": "1"
+    },
+    {
         "id": 87562,
         "term": "201701",
         "subjectCourse": "SENG265",
@@ -4437,6 +9018,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 91684,
+        "term": "201701",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 5,
+        "enrollment": 5,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 91685,
+        "term": "201701",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 58,
+        "enrollment": 55,
+        "partOfTerm": "1"
+    },
+    {
         "id": 87571,
         "term": "201701",
         "subjectCourse": "SENG401",
@@ -4461,6 +9060,33 @@
         "sequenceNumber": "A01",
         "maximumEnrollment": 90,
         "enrollment": 79,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 99062,
+        "term": "201705",
+        "subjectCourse": "ECE242",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 7,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 99082,
+        "term": "201705",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 25,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 98476,
+        "term": "201705",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 20,
+        "enrollment": 16,
         "partOfTerm": "1"
     },
     {
@@ -4543,6 +9169,114 @@
         "maximumEnrollment": 70,
         "enrollment": 58,
         "partOfTerm": "B1"
+    },
+    {
+        "id": 97986,
+        "term": "201705",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 112,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 97914,
+        "term": "201705",
+        "subjectCourse": "ECE216",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 97987,
+        "term": "201705",
+        "subjectCourse": "ECE220",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 150,
+        "enrollment": 96,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 97988,
+        "term": "201705",
+        "subjectCourse": "ECE250",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 160,
+        "enrollment": 140,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 98001,
+        "term": "201705",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 130,
+        "enrollment": 105,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 98791,
+        "term": "201705",
+        "subjectCourse": "ECE260",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 20,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 99088,
+        "term": "201705",
+        "subjectCourse": "ECE299",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 130,
+        "enrollment": 98,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 99057,
+        "term": "201705",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 55,
+        "enrollment": 39,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 98784,
+        "term": "201705",
+        "subjectCourse": "ECE310",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 5,
+        "enrollment": 2,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 97971,
+        "term": "201705",
+        "subjectCourse": "ECE403",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 75,
+        "enrollment": 77,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 97979,
+        "term": "201705",
+        "subjectCourse": "ECE410",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 56,
+        "enrollment": 47,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 98531,
+        "term": "201705",
+        "subjectCourse": "ECE499",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 90,
+        "enrollment": 85,
+        "partOfTerm": "1"
     },
     {
         "id": 98244,
@@ -4983,6 +9717,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 50,
         "enrollment": 49,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 116826,
+        "term": "201901",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 10,
+        "enrollment": 4,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 115582,
+        "term": "201901",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 60,
+        "enrollment": 54,
         "partOfTerm": "1"
     },
     {
@@ -6111,6 +10863,24 @@
         "partOfTerm": "1"
     },
     {
+        "id": 160601,
+        "term": "202101",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 8,
+        "enrollment": 6,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 160733,
+        "term": "202101",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 64,
+        "enrollment": 69,
+        "partOfTerm": "1"
+    },
+    {
         "id": 158859,
         "term": "202101",
         "subjectCourse": "SENG401",
@@ -6936,6 +11706,24 @@
         "sequenceNumber": "A02",
         "maximumEnrollment": 57,
         "enrollment": 56,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 183339,
+        "term": "202201",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A01",
+        "maximumEnrollment": 10,
+        "enrollment": 9,
+        "partOfTerm": "1"
+    },
+    {
+        "id": 183509,
+        "term": "202201",
+        "subjectCourse": "SENG371",
+        "sequenceNumber": "A02",
+        "maximumEnrollment": 62,
+        "enrollment": 59,
         "partOfTerm": "1"
     },
     {
