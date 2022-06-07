@@ -56,6 +56,8 @@ def main() -> None:
     parser = ArgumentParser(description="Preprocessing for algorithm 2 - ML method")
     parser.add_argument("-x", action="store", dest="xlsx", help="output data frame to .xlsx")
     parser.add_argument("-j", action="store", dest="json", help="output data frame to .json")
+    parser.add_argument("-c", action="store", dest="csv", help="output data frame to .csv")
+
     args = parser.parse_args()
 
     if not any(vars(args).values()):
@@ -67,6 +69,8 @@ def main() -> None:
         df.to_excel(args.xlsx + ".xlsx")
     if args.json:
         df.to_json(args.json + ".json")
+    if args.csv:
+        df.to_csv(args.csv + ".csv")
 
 
 if __name__ == "__main__":
