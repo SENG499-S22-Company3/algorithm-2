@@ -7,13 +7,21 @@ def pre_process() -> DataFrame:
     df = read_json("data/uniqueClassData.json")
     df_y = read_json("data/yearEnrollmentData.json")
 
-    df = df.assign(**{"# Offerings":1, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
+    df = df.assign(**{"semester":'', "# Offerings":1,"isBefore2014": 1, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
 
     for i in df.index:
         year = int(str(df.at[i, "term"])[:-2])
         semester = int(str(df.at[i, "term"])[-2:])
         if semester in (1, 5):
             year = year - 1
+
+        match semester:
+            case 1:
+                df.at[i, "semester"]='Spring'
+            case 5:
+                df.at[i, "semester"]='Summer'
+            case 9:
+                df.at[i, "semester"]='Fall'
 
         # Number of SENG students by year when the course is offered
         if int(df.at[i, "term"]) >= 201409:
@@ -25,6 +33,7 @@ def pre_process() -> DataFrame:
             df.at[i, "# Y5+"] = df_y[df_y["year"] == year]["5thYear"].values[0] + \
                                 df_y[df_y["year"] == year]["6thYear"].values[0] + \
                                 df_y[df_y["year"] == year]["7thYear"].values[0]
+            df.at[i, "isBefore2014"] = 0
 
         for j in df.index:
             year2 = int(str(df.at[j, "term"])[:-2])
@@ -42,12 +51,24 @@ def pre_process() -> DataFrame:
             ]):
                 df.at[i, "# Offerings"] = df.at[i, "# Offerings"] + 1
 
+            # Computes the total maximumEnrollment and enrollment for A01 section
+            if all([
+                df.at[i, "term"] == df.at[j, "term"],
+                df.at[i, "subjectCourse"] == df.at[j, "subjectCourse"],
+                df.at[i, "sequenceNumber"] == "A01",
+                df.at[j, "sequenceNumber"] != "A01"
+            ]):
+                df.at[i, "maximumEnrollment"] =  df.at[i, "maximumEnrollment"] +  df.at[j, "maximumEnrollment"]
+                df.at[i, "enrollment"] =  df.at[i, "enrollment"] +  df.at[j, "enrollment"]
+
             # Different course offered the same semester
             if df.at[i, "term"] == df.at[j, "term"]:
                 df.at[i,df.at[j, "subjectCourse"]] = 1
 
     df.fillna(0, inplace=True, downcast="infer")
     df = df.reset_index(drop=True)
+    df=df[df['sequenceNumber'].str.contains('A01')]
+    df=df.drop(columns=['sequenceNumber'])
     return df
 
 
