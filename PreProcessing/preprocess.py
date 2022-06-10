@@ -4,7 +4,10 @@ import pandas as pd
 
 def pre_process(df) -> pd.DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
+    df = df.drop(columns=['id','maximumEnrollment', 'term','part'])
     
+    df = pd.get_dummies(data=df, columns=['subjectCourse','semester'])
+    print(df.columns)
     return df
 
 
@@ -32,11 +35,11 @@ def main() -> None:
     preprocessed_df = pre_process(df.copy())
 
     if args.xlsx:
-        df.to_excel("preprocessed_" + args.xlsx.split("/")[-1] + ".xlsx", index=False)
+        preprocessed_df.to_excel("preprocessed_" + args.xlsx.split("/")[-1] + ".xlsx", index=False)
     if args.json:
-        df.to_json("preprocessed_" + args.json.split("/")[-1] + ".json", index=False)
+        preprocessed_df.to_json("preprocessed_" + args.json.split("/")[-1] + ".json", index=False)
     if args.csv:
-        df.to_csv("preprocessed_" + args.csv.split("/")[-1] + ".csv", index=False)
+        preprocessed_df.to_csv("preprocessed_" + args.csv.split("/")[-1] + ".csv", index=False)
 
 
         
