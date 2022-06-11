@@ -1,9 +1,11 @@
 from argparse import ArgumentParser
 from pandas import read_json, DataFrame
-
+from pathlib import PurePath
 
 def pre_process() -> DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
+    print('Feature engineering...')
+
     df = read_json("data/uniqueClassData.json")
     df_y = read_json("data/yearEnrollmentData.json")
 
@@ -17,11 +19,11 @@ def pre_process() -> DataFrame:
 
         match semester:
             case 1:
-                df.at[i, "semester"]='Spring'
+                df.at[i, "semester"] = 'Spring'
             case 5:
-                df.at[i, "semester"]='Summer'
+                df.at[i, "semester"] = 'Summer'
             case 9:
-                df.at[i, "semester"]='Fall'
+                df.at[i, "semester"] = 'Fall'
 
         # Number of SENG students by year when the course is offered
         if int(df.at[i, "term"]) >= 201409:
@@ -84,14 +86,16 @@ def main() -> None:
     if not any(vars(args).values()):
         parser.error("No arguments provided.")
 
+    root=PurePath(__file__).parents[1]
+
     df = pre_process()
 
     if args.xlsx:
-        df.to_excel(args.xlsx + ".xlsx", index=False)
+        df.to_excel(str(root) + "/PreProcessing/" + args.xlsx + ".xlsx", index=False)
     if args.json:
-        df.to_json(args.json + ".json", index=False)
+        df.to_json(str(root) + "/PreProcessing/" + args.json + ".json", index=False)
     if args.csv:
-        df.to_csv(args.csv + ".csv", index=False)
+        df.to_csv(str(root) + "/PreProcessing/" + args.csv + ".csv", index=False)
 
 
 if __name__ == "__main__":

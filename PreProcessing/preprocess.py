@@ -1,13 +1,15 @@
 from argparse import ArgumentParser
 import pandas as pd
-
+from pathlib import PurePath
 
 def pre_process(df) -> pd.DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
-    df = df.drop(columns=['id','maximumEnrollment', 'term','part'])
-    
+
+    print('Preprocessing...')
+
+    df = df.drop(columns=['id','maximumEnrollment', 'term'])
+
     df = pd.get_dummies(data=df, columns=['subjectCourse','semester'])
-    print(df.columns)
     return df
 
 
@@ -23,7 +25,6 @@ def main() -> None:
     if not any(vars(args).values()):
         parser.error("No arguments provided.")
 
-    
 
     if args.xlsx:
         df = pd.read_excel(args.xlsx + ".xlsx")
@@ -32,17 +33,19 @@ def main() -> None:
     if args.csv:
         df = pd.read_csv(args.csv + ".csv")
 
+    root=PurePath(__file__).parents[1]
+
     preprocessed_df = pre_process(df.copy())
 
     if args.xlsx:
-        preprocessed_df.to_excel("preprocessed_" + args.xlsx.split("/")[-1] + ".xlsx", index=False)
+        preprocessed_df.to_excel(str(root) + "/Modeling/" + "preprocessed_" + args.xlsx.split("/")[-1] + ".xlsx", index=False)
     if args.json:
-        preprocessed_df.to_json("preprocessed_" + args.json.split("/")[-1] + ".json", index=False)
+        preprocessed_df.to_json(str(root) + "/Modeling/" +"preprocessed_" + args.json.split("/")[-1] + ".json", index=False)
     if args.csv:
-        preprocessed_df.to_csv("preprocessed_" + args.csv.split("/")[-1] + ".csv", index=False)
+        preprocessed_df.to_csv(str(root) + "/Modeling/" + "preprocessed_" + args.csv.split("/")[-1] + ".csv", index=False)
 
 
-        
+
 
 
 if __name__ == "__main__":
