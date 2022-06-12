@@ -7,6 +7,8 @@ __pycache__/
 *.so
 *.csv
 *.png
+*.DS_Store
+
 # Distribution / packaging
 .Python
 build/
