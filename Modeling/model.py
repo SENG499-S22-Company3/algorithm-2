@@ -41,8 +41,6 @@ def train_model(df):
     plt.savefig('tree.png')
 
 
-
-
 def main() -> None:
     """Main function."""
     parser = ArgumentParser(description="Preprocessing for algorithm 2 - ML method")
@@ -69,12 +67,6 @@ def main() -> None:
 
     root=PurePath(__file__).parents[1]
     Path("./model.pkl").rename(str(root)+"/app/models/model.pkl")
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
