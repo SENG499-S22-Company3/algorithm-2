@@ -56,72 +56,72 @@
 	},
 	{
         "course": "ECE216",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE220",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE241",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE242",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE250",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE255",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE260",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE299",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE300",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE310",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE320",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE330",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE340",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE350",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
@@ -131,37 +131,42 @@
 	},
 	{
         "course": "ECE356",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE360",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE365",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE370",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE380",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE399",
-        "preReqs": [*],
+        "preReqs": [],
+    	"coReq" : []
+	},
+	{
+        "course": "ECE403",
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE410",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
@@ -171,27 +176,27 @@
 	},
 	{
         "course": "ECE458",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE463",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE488",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ECE499",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "ENG371",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
@@ -231,12 +236,12 @@
 	},
 	{
         "course": "SENG411",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "SENG421",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
@@ -246,7 +251,7 @@
 	},
 	{
         "course": "SENG435",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
@@ -256,17 +261,17 @@
 	},
 	{
         "course": "SENG466",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "SENG468",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
 	{
         "course": "SENG474",
-        "preReqs": [*],
+        "preReqs": [],
     	"coReq" : []
 	},
     {
