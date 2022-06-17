@@ -7,8 +7,39 @@ from csv import DictWriter
 import os
 import json
 
-RAW_DATA_FILE = "../raw_data/course_data_200805_202205.json"
+RAW_COURSE_DATA_FILE = "../raw_data/course_data_200805_202205.json"
+RAW_ENROLLMENT_DATA_FILE = "../raw_data/yearEnrollmentData.json"
 
+course_list = [
+	"MATH122",
+	"ENGR002",
+	"CSC111",
+	"CSC115",
+	"CSC230",
+	"ECE255",
+	"CSC225",
+	"SENG265",
+	"SENG310",
+	"SENG360",
+	"CSC360",
+	"CSC226",
+	"SENG321",
+	"SENG275",
+	"CSC355",
+	"ECE355",
+	"CSC320",
+	"CSC370",
+	"SENG371",
+	"SENG440",
+	"CSC361",
+	"ECE458",
+	"SENG426",
+	"SENG350",
+	"CSC460",
+	"ECE455",
+	"SENG499",
+	"SENG401"
+]
 
 def load_json(json_file: str) -> list[dict]:
     """Returns JSON data in the form of a list of dictionaries given a filename string."""
@@ -55,11 +86,12 @@ def parse_json(json_file: str) -> list[dict]:
 def filter_data(data: list[dict]) -> list[dict]:
     """Filters a list of courses to only include SENG and CSC lectures."""
     filtered_data = []
-
+    count = 0
     for course in data:
-        if course["subject"] in ("SENG", "CSC") and \
-           course["sequenceNumber"] in ("A01", "A02", "A03", "A04", "A05", "A06"):
+        if (course["subject"] + course["courseNumber"]) in course_list and \
+           course["sequenceNumber"] in ("A01", "A02", "A03", "A04", "A05", "A06") and count < 20:
             filtered_data.append(course)
+            count += 1
 
     return filtered_data
 
@@ -82,7 +114,7 @@ def main() -> None:
 
     # Setup input and output file paths
     script_dir = os.path.dirname(__file__)
-    abs_in_file_path = os.path.join(script_dir, RAW_DATA_FILE)
+    abs_in_file_path = os.path.join(script_dir, RAW_COURSE_DATA_FILE)
     output_dir = os.path.join(script_dir, "output")
 
     # Parse and filter the data
