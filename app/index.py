@@ -3,6 +3,7 @@ from marshmallow import EXCLUDE
 
 from app.models.course import Course, CourseSchema, Semester
 from app.data.course_path import course_list
+from app.featureEngineer.featureEngineer import pre_process
 
 
 app = Flask(__name__)
@@ -30,6 +31,14 @@ def add_course():
   course = CourseSchema().load(request.get_json(), unknown=EXCLUDE)
   course_list.append(course)
   return "", 204
+
+
+@app.route('/predict', methods=['POST'])
+def predict():
+  print(request.get_json())
+  df = pre_process(request.get_json())
+  return "", 204
+
 
 
 

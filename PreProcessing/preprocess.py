@@ -1,12 +1,12 @@
 from argparse import ArgumentParser
-from pandas import read_json, DataFrame
+import pandas as pd
+from pathlib import PurePath
 
-
-def pre_process() -> DataFrame:
+def pre_process() -> pd.DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
-    df_c = read_json("data/uniqueClassData.json")
-    df_y = read_json("data/yearEnrollmentData.json")
-    df_p = read_json("data/preReqData.json")
+    df_c = pd.read_json("../FeatureEngineering/data/uniqueClassData.json")
+    df_y = pd.read_json("../FeatureEngineering/data/yearEnrollmentData.json")
+    df_p = pd.read_json("../FeatureEngineering/data/preReqData.json")
 
     df_c = df_c.assign(**{"# Offerings":1, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
 
@@ -79,24 +79,28 @@ def pre_process() -> DataFrame:
     df_c = df_c.reset_index(drop=True)
     return df_c
 
-
 def main() -> None:
     """Main function."""
     parser = ArgumentParser(description="Preprocessing for algorithm 2 - ML method")
-    parser.add_argument("-x", action="store", dest="xlsx", help="output data frame to .xlsx")
-    parser.add_argument("-j", action="store", dest="json", help="output data frame to .json")
+    parser.add_argument("-x", action="store_true", dest="xlsx", help="output data frame to .xlsx")
+    parser.add_argument("-j", action="store_true", dest="json", help="output data frame to .json")
+    parser.add_argument("-c", action="store_true", dest="csv", help="output data frame to .csv")
+
     args = parser.parse_args()
 
     if not any(vars(args).values()):
         parser.error("No arguments provided.")
 
-    df_c = pre_process()
+    root=PurePath(__file__).parents[1]
+
+    preprocessed_df = pre_process()
 
     if args.xlsx:
-        df_c.to_excel(args.xlsx + ".xlsx")
+        preprocessed_df.to_excel(str(root) + "/Modeling/" + "preprocessed_data" + ".xlsx")
     if args.json:
-        df_c.to_json(args.json + ".json")
-
+        preprocessed_df.to_json(str(root) + "/Modeling/" +"preprocessed_data" + ".json")
+    if args.csv:
+        preprocessed_df.to_csv(str(root) + "/Modeling/" + "preprocessed_data" + ".csv")
 
 if __name__ == "__main__":
     main()

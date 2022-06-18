@@ -1,0 +1,10 @@
+[
+    {
+        "courses_to_predict":["CSC111","SENG265","SENG421"],
+        "semester": "F"
+    },
+    {
+        "courses_to_predict":["CSC115","SENG275"],
+        "semester": "S"
+    }
+]
