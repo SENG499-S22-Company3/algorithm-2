@@ -5,7 +5,7 @@ processedData = []
 # List 
 classlist = ['CSC111', 'CSC115', 'CSC225', 'CSC226', 'CSC230', 'CSC320', 'CSC355', 'CSC360', 'CSC361', 'CSC370', 'CSC460', 'ECE216', 'ECE220', 'ECE241', 'ECE242', 'ECE250', 'ECE255', 'ECE260', 'ECE299', 'ECE300', 'ECE310', 'ECE320', 'ECE330', 'ECE340', 'ECE350', 'ECE355', 'ECE356', 'ECE360', 'ECE365', 'ECE370', 'ECE380', 'ECE399', 'ECE403', 'ECE410', 'ECE455', 'ECE458', 'ECE463', 'ECE488', 'ECE499', 'ENG371', 'SENG265', 'SENG275', 'SENG310', 'SENG321', 'SENG350', 'SENG360', 'SENG371', 'SENG401', 'SENG411', 'SENG421', 'SENG426', 'SENG435', 'SENG440', 'SENG466', 'SENG468', 'SENG474', 'SENG499']
 
-with open('banner_200805_202205_fixed.json', encoding="utf8") as jsonfile:
+with open('banner.json', encoding="utf8") as jsonfile:
 	histClassData = json.load(jsonfile)
 
 for elem in histClassData:
