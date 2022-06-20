@@ -2,12 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
+import os
 from argparse import ArgumentParser
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
-from sklearn import tree
+from sklearn import tree, preprocessing
 from pathlib import Path,PurePath
-
 
 def train_model(df):
     print('Creating Decision Tree...')
@@ -16,11 +16,21 @@ def train_model(df):
     X = df.drop(columns=['enrollment', 'partOfTerm'])
     y = df[['enrollment']]
 
+    # Label encoder for subjectCourse
+    le_sc = preprocessing.LabelEncoder()
+    le_sc.fit(X["subjectCourse"])
+    X["subjectCourse"] = le_sc.transform(X["subjectCourse"])
+
+    # Label encoder for sequenceNumber
+    le_sn = preprocessing.LabelEncoder()
+    le_sn.fit(X["sequenceNumber"])
+    X["sequenceNumber"] = le_sn.transform(X["sequenceNumber"])
+
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
     model = tree.DecisionTreeRegressor(criterion='squared_error',
                     max_depth=30,
-                    max_leaf_nodes=60,
+                    max_leaf_nodes=30,
                     min_samples_leaf=3,
                     random_state=11)
 
@@ -66,8 +76,13 @@ def main() -> None:
         pickle.dump(model, model_file)
 
     root=PurePath(__file__).parents[1]
-    Path("./model.pkl").rename(str(root)+"/app/models/model.pkl")
+    # Delete if it already exists
+    try:
+        os.remove(str(root)+"/app/models/model.pkl")
+    except OSError:
+        pass
 
+    Path("./model.pkl").rename(str(root)+"/app/models/model.pkl")
 
 if __name__ == "__main__":
     main()
