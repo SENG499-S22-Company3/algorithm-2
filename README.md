@@ -41,3 +41,4 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 The only required field is "name" (string).
 Other possible fields are "department" (string), "class_size" (int), "semester" (int), "year" (int), "prereqs" (list(list(str))).
+
