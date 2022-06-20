@@ -1,4 +1,4 @@
-# algorithm-2
+# algorithm-2 Readme
 
 ## Local Environment Setup
 1. Ensure `python-3.10` and Heroku CLI tools are installed
