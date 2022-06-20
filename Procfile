@@ -1,1 +1,1 @@
-web: gunicorn setup:app
+web: algorithm-2
