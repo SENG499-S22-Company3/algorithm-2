@@ -26,13 +26,13 @@ def train_model(df):
     le_sn.fit(X["sequenceNumber"])
     X["sequenceNumber"] = le_sn.transform(X["sequenceNumber"])
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
     model = tree.DecisionTreeRegressor(criterion='squared_error',
-                    max_depth=30,
+                    max_depth=10,
                     max_leaf_nodes=30,
                     min_samples_leaf=3,
-                    random_state=11)
+                    random_state=15)
 
     # fit the regressor with X and Y data
     print("Training Model...")
