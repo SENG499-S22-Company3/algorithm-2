@@ -7,10 +7,12 @@ from argparse import ArgumentParser
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 from sklearn import tree, preprocessing
+from sklearn.ensemble import RandomForestRegressor
 from pathlib import Path,PurePath
+from xgboost import XGBRegressor, plot_tree
 
 def train_model(df):
-    print('Creating Decision Tree...')
+    print('Creating Gradient Boosted Decesion Tree Model...')
 
     # create a regressor object
     X = df.drop(columns=['enrollment', 'partOfTerm'])
@@ -28,11 +30,13 @@ def train_model(df):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
-    model = tree.DecisionTreeRegressor(criterion='squared_error',
+    model = XGBRegressor(gamma=10,                 
+                    learning_rate=0.01,
                     max_depth=10,
-                    max_leaf_nodes=30,
-                    min_samples_leaf=3,
-                    random_state=15)
+                    n_estimators=10000,                                                                    
+                    subsample=0.8,
+                    random_state=20,
+                    reg_alpha = 0.3)
 
     # fit the regressor with X and Y data
     print("Training Model...")
@@ -44,11 +48,13 @@ def train_model(df):
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
+    """
     fig = plt.figure(figsize=(60,45))
     tree.plot_tree(model,
                    feature_names=X.columns,
                    filled=True)
-    plt.savefig('tree.png')
+    plt.savefig('xgb_tree.png')
+    """
 
 
 def main() -> None:
@@ -72,17 +78,18 @@ def main() -> None:
 
     model = train_model(df.copy())
 
-    with open('model.pkl', 'wb') as model_file:
+    with open('model_xgb', 'wb') as model_file:
         pickle.dump(model, model_file)
 
     root=PurePath(__file__).parents[1]
+    
     # Delete if it already exists
     try:
-        os.remove(str(root)+"/app/models/model.pkl")
+        os.remove(str(root)+"/app/models/model_xgb.pkl")
     except OSError:
         pass
 
-    Path("./model.pkl").rename(str(root)+"/app/models/model.pkl")
+    Path("./model_xgb").rename(str(root)+"/app/models/model_xgb.pkl")
 
 if __name__ == "__main__":
     main()
