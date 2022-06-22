@@ -7,6 +7,11 @@ from app.data.course_path import course_list
 
 app = Flask(__name__)
 
+@app.route('/healthcheck')
+def healthcheck():
+  return 'OK'
+
+
 @app.route('/')
 def get_all_courses():
   schema = CourseSchema(many=True)
