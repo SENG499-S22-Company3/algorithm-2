@@ -1,19 +1,22 @@
 from argparse import ArgumentParser
 import pandas as pd
 from pathlib import PurePath
+from tqdm import tqdm
 
 def pre_process() -> pd.DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
-    df_c = pd.read_json("../FeatureEngineering/data/uniqueClassData.json")
-    df_y = pd.read_json("../FeatureEngineering/data/yearEnrollmentData.json")
-    df_p = pd.read_json("../FeatureEngineering/data/preReqData.json")
+    print("Reading input data")
+    df_c = pd.read_json("data/uniqueClassData.json")
+    df_y = pd.read_json("data/yearEnrollmentData.json")
+    df_p = pd.read_json("data/preReqData.json")
 
     df_c = df_c.assign(**{"# Offerings":1, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
 
-    for i in df_c.index:
+    print("Starting Processing ...")
+    for i in tqdm(range(len(df_c.index))):
         year = int(str(df_c.at[i, "term"])[:-2])
         semester = int(str(df_c.at[i, "term"])[-2:])
-        # If spring or summer semester, its part of the previous academic year
+        # If the term is spring or summer semester, the course is part of the previous academic year
         if semester in (5, 9):
             semester = 0
         elif semester in (1,5):
@@ -26,10 +29,9 @@ def pre_process() -> pd.DataFrame:
         # Get the list of prereqs for this course
         preReqsIndex = df_p[df_p['course'] == df_c.at[i, "subjectCourse"]].reset_index()
         preReqsList = preReqsIndex.at[0, "preReqs"]
-        numPreReqs = len(preReqsList)
 
         # Set the number of pre reqs
-        df_c.at[i, "# pre reqs"] = len(preReqsIndex.at[0, "preReqs"])
+        df_c.at[i, "# pre reqs"] = len(preReqsList)
 
         # Number of SENG students by year when the course is offered
         if year >= 2014 and year <= 2021:
@@ -67,7 +69,7 @@ def pre_process() -> pd.DataFrame:
             # Number of offerings of the pre reqs in the previous semester
             if((year == year2) and (semester == (semester2 - 1))) or \
             ((year == (year2 - 1)) and ((semester == 0 and semester2 == 2))):
-                if df_c.at[j, "subjectCourse"] in preReqsList:
+                if (df_c.at[j, "subjectCourse"] in preReqsList) and (df_c.at[j, "sequenceNumber"] == "A01"):
                     df_c.at[i, "# prereqs prev sem"] += 1
                     df_c.at[i, "# students in prereqs"] += df_c.at[j, "enrollment"]
 
@@ -77,6 +79,9 @@ def pre_process() -> pd.DataFrame:
 
     df_c.fillna(0, inplace=True, downcast="infer")
     df_c = df_c.reset_index(drop=True)
+    df_c = df_c[df_c['sequenceNumber'].str.contains('A01')]
+    df_c = df_c.drop(columns=['id', 'term', 'partOfTerm', 'maximumEnrollment', 'sequenceNumber'])
+
     return df_c
 
 def main() -> None:
@@ -95,12 +100,15 @@ def main() -> None:
 
     preprocessed_df = pre_process()
 
+    print("Processing finished, outputting file to app/models/data")
+    print("Run the ../app/models/train_model.py script to train the models using the generated data")
+
     if args.xlsx:
-        preprocessed_df.to_excel(str(root) + "/Modeling/" + "preprocessed_data" + ".xlsx")
+        preprocessed_df.to_excel(str(root) + "/app/models/data/training_data.xlsx")
     if args.json:
-        preprocessed_df.to_json(str(root) + "/Modeling/" +"preprocessed_data" + ".json")
+        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json")
     if args.csv:
-        preprocessed_df.to_csv(str(root) + "/Modeling/" + "preprocessed_data" + ".csv")
+        preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv")
 
 if __name__ == "__main__":
     main()
