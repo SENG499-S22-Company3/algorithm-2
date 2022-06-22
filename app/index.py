@@ -1,9 +1,11 @@
+from lib2to3.pgen2.pgen import DFAState
 from flask import Flask, jsonify, request
 from marshmallow import EXCLUDE
 
 from app.models.course import Course, CourseSchema, Semester
 from app.data.course_path import course_list
 from app.featureEngineer.featureEngineer import pre_process
+from app.models.model import model_predict
 
 
 app = Flask(__name__)
@@ -33,11 +35,12 @@ def add_course():
   return "", 204
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict_class_size', methods=['POST'])
 def predict():
-  print(request.get_json())
-  df = pre_process(request.get_json())
-  return "", 204
+  data = request.get_json()
+  df = pre_process(data)
+  capacity = model_predict(data,df)
+  return capacity
 
 
 

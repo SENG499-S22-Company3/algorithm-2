@@ -1,10 +1,22 @@
 [
     {
-        "courses_to_predict":["CSC111","SENG265","SENG421"],
-        "semester": "F"
+        "subject":"SENG",
+        "code": "321",
+        "seng_ratio": 0.75,
+        "semester": "FALL",
+        "capacity":0
     },
     {
-        "courses_to_predict":["CSC115","SENG275"],
-        "semester": "S"
+        "subject":"SENG",
+        "code": "499",
+        "seng_ratio": 0.75,
+        "semester": "FALL",
+        "capacity":0
+    },{
+        "subject":"CSC",
+        "code": "111",
+        "seng_ratio": 0.75,
+        "semester": "FALL",
+        "capacity":0
     }
 ]

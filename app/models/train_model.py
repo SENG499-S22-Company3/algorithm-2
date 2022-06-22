@@ -57,10 +57,10 @@ def train_model_xgb(df):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
-    model = XGBRegressor(gamma=10,                 
+    model = XGBRegressor(gamma=10,
                     learning_rate=0.01,
                     max_depth=10,
-                    n_estimators=10000,                                                                    
+                    n_estimators=10000,
                     subsample=0.8,
                     random_state=20,
                     reg_alpha = 0.3)
@@ -142,6 +142,8 @@ def main() -> None:
         df = pd.read_json("data/training_data.json")
     if args.csv:
         df = pd.read_csv("data/training_data.csv")
+
+    df = df.loc[:, ~df.columns.str.startswith('Unnamed')]
 
     if args.xgb:
         model = train_model_xgb(df.copy())
