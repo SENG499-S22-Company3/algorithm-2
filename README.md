@@ -49,7 +49,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
       "seng_ratio": <RATIO OF SENG STUDENTS>,
       "semester": <SEMESTER>,
       "capacity": <CAPICITY OF COURSE>}
-}' http://localhost:5000/
+}' http://localhost:5000/predict_class_size
 ```
 
  The required fields are "subject" (string), "code" (string), "seng_ratio" (int), "semester" (string), and "capacity" (int).
