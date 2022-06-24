@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY ./requirements.txt .
 
-RUN apk --update add gcc build-base freetype-dev libpng-dev openblas-dev
-RUN pip install --upgrade pip setuptools wheel
-RUN pip install -r requirements.txt --no-cache-dir 
+RUN apk add --no-cache --update python3 python3-dev gcc gfortran musl-dev g++ ibffi-dev openssl-dev libxml2 libxml2-dev libxslt libxslt-dev libjpeg-turbo-dev zlib-dev
+
+RUN pip install --upgrade cython
+RUN pip install --upgrade pip 
+RUN pip install -r requirements.txt 
 
 COPY . .
 
