@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./requirements.txt .
 
-RUN apk update && apk add --no-cache build-base
+RUN apk --update add gcc build-base freetype-dev libpng-dev openblas-dev
 RUN pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt
 
