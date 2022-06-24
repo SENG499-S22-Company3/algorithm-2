@@ -10,6 +10,11 @@ from app.models.model import model_predict
 
 app = Flask(__name__)
 
+@app.route('/healthcheck')
+def healthcheck():
+  return 'OK'
+
+
 @app.route('/')
 def get_all_courses():
   schema = CourseSchema(many=True)

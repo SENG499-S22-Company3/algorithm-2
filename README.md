@@ -42,6 +42,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 The only required field is "name" (string).
 Other possible fields are "department" (string), "class_size" (int), "semester" (int), "year" (int), "prereqs" (list(list(str))).
 
+
 ```
 curl -X POST -H "Content-Type: application/json" -d '{
     { "subject": <COURSE SUBJECT>,
@@ -56,3 +57,4 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
  The capcity of the course must be set to 0 for the machine learning model to predict a course capcity, or else the same
  capacity value will be returned.
+
