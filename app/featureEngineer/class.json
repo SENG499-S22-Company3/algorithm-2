@@ -1,4 +1,4 @@
-curl -X POST -H "Content-Type: application/json" -d '[
+[
     {
         "subject":"SENG",
         "code": "321",
@@ -19,6 +19,5 @@ curl -X POST -H "Content-Type: application/json" -d '[
         "semester": "FALL",
         "capacity":0
     }
-]' http://localhost:5000/predict_class_size
+]
 
-curl -X POST -H "Content-Type: application/json" -d '[ { "subject":"SENG", "code": "321", "seng_ratio": 0.75, "semester": "FALL", "capacity":0 }, { "subject":"SENG", "code": "499", "seng_ratio": 0.75, "semester": "FALL", "capacity":0 },{ "subject":"CSC", "code": "111", "seng_ratio": 0.75, "semester": "FALL", "capacity":0 } ]' http://localhost:5000/predict_class_size
