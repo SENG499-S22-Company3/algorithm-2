@@ -6,7 +6,7 @@ COPY ./requirements.txt .
 
 RUN apk --update add gcc build-base freetype-dev libpng-dev openblas-dev
 RUN pip install --upgrade pip setuptools
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --no-cache-dir 
 
 COPY . .
 
