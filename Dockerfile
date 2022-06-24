@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY ./requirements.txt .
 
+RUN apk update && apk add --no-cache build-base
 RUN pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt
 
