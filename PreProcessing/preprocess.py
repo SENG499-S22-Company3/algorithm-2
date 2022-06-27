@@ -10,8 +10,9 @@ def pre_process() -> pd.DataFrame:
     df_y = pd.read_json("data/yearEnrollmentData.json")
     df_p = pd.read_json("data/preReqData.json")
 
-    df_c = df_c.assign(**{"# Offerings":1, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
+    df_c = df_c.assign(**{"semester":"","# Offerings":1, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
 
+    df_c = df_c.rename(columns={"enrollment": "capacity"})
     print("Starting Processing ...")
     for i in tqdm(range(len(df_c.index))):
         year = int(str(df_c.at[i, "term"])[:-2])
@@ -25,13 +26,21 @@ def pre_process() -> pd.DataFrame:
         else:
             semester = 2
             year = year - 1
+        
+        match semester:
+            case 1:
+                df_c.at[i, "semester"]='SPRING'
+            case 2:
+                df_c.at[i, "semester"]='SUMMER'
+            case 0:
+                df_c.at[i, "semester"]='FALL'
 
         # Get the list of prereqs for this course
         preReqsIndex = df_p[df_p['course'] == df_c.at[i, "subjectCourse"]].reset_index()
         preReqsList = preReqsIndex.at[0, "preReqs"]
 
         # Set the number of pre reqs
-        df_c.at[i, "# pre reqs"] = len(preReqsList)
+        df_c.at[i, "# prereqs"] = len(preReqsList)
 
         # Number of SENG students by year when the course is offered
         if year >= 2014 and year <= 2021:
@@ -71,16 +80,25 @@ def pre_process() -> pd.DataFrame:
             ((year == (year2 - 1)) and ((semester == 0 and semester2 == 2))):
                 if (df_c.at[j, "subjectCourse"] in preReqsList) and (df_c.at[j, "sequenceNumber"] == "A01"):
                     df_c.at[i, "# prereqs prev sem"] += 1
-                    df_c.at[i, "# students in prereqs"] += df_c.at[j, "enrollment"]
+                    df_c.at[i, "# students in prereqs"] += df_c.at[j, "capacity"]
 
             # Different course offered the same semester
             if df_c.at[i, "term"] == df_c.at[j, "term"]:
                 df_c.at[i,df_c.at[j, "subjectCourse"]] = 1
+            
+            # Capacity of course
+            if all([
+                df_c.at[i, "term"] == df_c.at[j, "term"],
+                df_c.at[i, "subjectCourse"] == df_c.at[j, "subjectCourse"],
+                df_c.at[i, "sequenceNumber"] == "A01",
+                df_c.at[j, "sequenceNumber"] != "A01"
+            ]):
+                df_c.at[i, "capacity"] =  df_c.at[i, "capacity"] +  df_c.at[j, "capacity"]
 
     df_c.fillna(0, inplace=True, downcast="infer")
     df_c = df_c.reset_index(drop=True)
     df_c = df_c[df_c['sequenceNumber'].str.contains('A01')]
-    df_c = df_c.drop(columns=['id', 'term', 'partOfTerm', 'maximumEnrollment', 'sequenceNumber'])
+    df_c = df_c.drop(columns=['id', 'term', 'partOfTerm', 'maximumEnrollment','sequenceNumber'])
 
     return df_c
 
