@@ -4,11 +4,11 @@ from pickle import load
 def model_predict(data,df):
     """Predict capacity for coures subbmitted using a pretrained ML model"""
     preprocessed_df = read_json('app/models/data/training_data.json')
-    preprocessed_df = get_dummies(preprocessed_df, columns=['subjectCourse'])
+    preprocessed_df = get_dummies(preprocessed_df, columns=['subjectCourse','semester'])
     preprocessed_df = preprocessed_df.loc[[0]]
 
     df = df.merge(preprocessed_df, how='left')
-    df = df.drop(columns=['seng_ratio', 'enrollment', 'capacity','semester'])
+    df = df.drop(columns=['seng_ratio', 'capacity'])
     df.fillna(0, inplace=True, downcast="infer")
 
     ml_model_pkl = open('app/models/dt_model.pkl', 'rb')

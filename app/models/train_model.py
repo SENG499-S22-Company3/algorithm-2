@@ -14,11 +14,11 @@ def train_model_dt(df):
     print('Creating Decision Tree...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
+    X = df.drop(columns=['capacity'])
+    y = df[['capacity']]
 
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    # One hot encode 
+    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
@@ -49,11 +49,11 @@ def train_model_xgb(df):
     print('Creating Gradient Boosted Decesion Tree Model...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
+    X = df.drop(columns=['capacity'])
+    y = df[['capacity']]
 
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    # One hot encode
+    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
@@ -89,11 +89,11 @@ def train_model_rf(df):
     print('Creating Random Forest Model...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
+    X = df.drop(columns=['capacity'])
+    y = df[['capacity']]
 
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    # One hot encode 
+    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
