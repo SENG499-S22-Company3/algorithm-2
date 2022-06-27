@@ -1,10 +1,10 @@
 import os
 import json
-from numpy import NaN
 import pandas
-import matplotlib.pyplot as plt
 from sklearn import linear_model
 from collections import defaultdict
+
+pandas.options.mode.chained_assignment = None
 
 PARSE_OUTPUT_PATH = "/output/output2.json"
 ENROLLMENT_DATA_PATH = "/output/yearEnrollmentData.json"
@@ -53,7 +53,6 @@ def parse_enrollment_data(enrollment_json_data):
 	parsed_data = defaultdict(list)
 	for year in enrollment_json_data:
 		parsed_data[year['year']].append( [year['year'],  year['1stYear'],  year['2ndYear'] + year['2ndYearTransfer'],  year['3rdYear'],  year['4thYear'] + year['5thYear'] + year['6thYear'] + year['7thYear']])
-		# parsed_data[year['year']].append({'year': year['year'], 'year1': year['1stYear'], 'year2': year['2ndYear'] + year['2ndYearTransfer'], 'year3': year['3rdYear'], 'year4': year['4thYear'] + year['5thYear'] + year['6thYear'] + year['7thYear']})
 	return parsed_data
 
 def check_if_course_exists(course_list, course_term):
@@ -87,62 +86,50 @@ def create_course_dictionary(course_json_file: str):
 	print(f'unique keys count: {len(course_dictionary.keys())}')
 	return course_dictionary
 
-def main():
-
+def create_regress_models():
 	course_dictionary = create_course_dictionary(os.path.dirname(__file__) + PARSE_OUTPUT_PATH)
 	enrollment_json_data = load_json(os.path.dirname(__file__) + ENROLLMENT_DATA_PATH)
 	enrollment_dictionary = parse_enrollment_data(enrollment_json_data)
-	print("************************************************************")
-	# print(enrollment_dictionary[2020][0][2])
-	print("************************************************************")
+	
 	course_list = []
 	for key in course_dictionary.keys():
-		# print("************************************************************")
 		for element in course_dictionary[key]:
 			course_list.append([element['course_name'], element['term'], element['class_size']])
-	print("************************************************************")
 
 	df = pandas.DataFrame(course_list, columns =['course_name', 'term', 'class_size'])
 	df = df.pivot(index = 'term', columns = 'course_name', values = 'class_size').fillna(0).astype(int)
 	df['semester'] = (df.index%100/4).astype(int)
 	df.index = (df.index/100).astype(int)
-	for element in df['course_name']:
-		print(element)
-	df['enrollment_size'] = enrollment_dictionary[df.index][0][(df['course_name'][-3,])]
 	
-	print("************************************************************")
-	# print(df[['semester'] + ['SENG499'] + course_list_to_predict['SENG499']])
+	regr_models = {}
 	
-	# X_axis = df[['X_axis', 'Z_axis']]
-	# Y_axis = df[['SENG499']]
+	for course in course_list_to_predict:
+		
+		if course in df.columns:
+			# course_df = pandas.DataFrame(columns =[course, 'term', 'class_size'])
+			temp_df = df[(df[course] != 0) & (df.index < 2022) & (df.index > 2013)]
+			temp_df['year_enrollment'] = (temp_df.index*0).astype(int)
+			for index in temp_df.index:
+				if index in enrollment_dictionary:
+					temp_df.loc[index, 'year_enrollment'] = enrollment_dictionary[index][0][int(course[-3])]
+			
+			X_values = temp_df[['semester', 'year_enrollment']].values
+			Y_values = temp_df[[course]].values
+			
+			for i in range(0,len(X_values)):
+				print(X_values[i], Y_values[i])
+
+			temp_regr_model = linear_model.LinearRegression()
+			temp_regr_model.fit(X_values, Y_values)
+			regr_models.update({course: temp_regr_model})
+	return regr_models
+
+def main():
+
+
+	course_regr_models = create_regress_models()
+	print(course_regr_models)
 	
-	# testing panda
-
-	# test_data = {
-	# 	'X_axis': [1,2,3,4,5,6,7,8,9],
-	# 	'Z_axis': [1,2,3,4,5,6,7,8,9],
-	# 	'Y_axis': [1,2,3,4,5,6,7,8,9]}
-
-	# df = pandas.DataFrame(test_data, columns =['X_axis', 'Z_axis', 'Y_axis'])
-	
-	
-	# regr = linear_model.LinearRegression()
-	# regr.fit(X_axis, Y_axis)
-
-	# predict_Y_axis = regr.predict([[20,10]])
-
-	# print(predict_Y_axis)
-
-	# plt.scatter(df['X_axis'], df['Y_axis'])
-	# plt.title('X_axis vs Y_axis', fontsize=14)
-	# plt.x_axislabel('X_axis', fontsize=14)
-	# plt.Y_axislabel('Y_axis', fontsize=14)
-	# plt.grid(True)
-	# plt.show()
-
-
-
-
 
 if __name__ == "__main__":
 		main()
