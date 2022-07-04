@@ -17,4 +17,4 @@ EXPOSE 5000
 
 ENV FLASK_APP=setup.py
 
-CMD ["flask", "run", "-h", "0.0.0.0", "--port", "$PORT"]
+CMD ["flask", "run", "-h", "0.0.0.0", "--port", "5000"]
