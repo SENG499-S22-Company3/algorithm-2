@@ -18,12 +18,6 @@ def train_model_dt(df):
     
     y = df[['capacity']]
 
-    # One hot encode 
-    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
-    X.drop(columns=['# Offerings', '# prereqs', '# prereqs prev sem',
-       '# students in prereqs', '# Y1', '# Y2', '# Y3', '# Y4', '# Y5+'], inplace=True)
-    print(len(X.columns))
-
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
     model = tree.DecisionTreeRegressor(criterion='squared_error',
@@ -55,9 +49,6 @@ def train_model_xgb(df):
     # create a regressor object
     X = df.drop(columns=['capacity'])
     y = df[['capacity']]
-
-    # One hot encode
-    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
@@ -95,9 +86,6 @@ def train_model_rf(df):
     # create a regressor object
     X = df.drop(columns=['capacity'])
     y = df[['capacity']]
-
-    # One hot encode 
-    X = pd.get_dummies(X, columns=['subjectCourse','semester'])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
