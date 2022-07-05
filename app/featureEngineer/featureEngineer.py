@@ -1,8 +1,13 @@
 from pandas import DataFrame, get_dummies,read_json
+import os
 
 def pre_process(data) -> DataFrame:
     """Pre-processes JSON data for the ML model"""
-    df_p = read_json("data/preReqData.json")
+    print("Reading input data")
+
+
+
+    # df_p = read_json("/app/featureEngineer/data/preReqData.json")
 
     df = DataFrame(data)
     df["subjectCourse"] = df["subject"].astype(str)  + df["code"].astype(str)
@@ -21,6 +26,8 @@ def pre_process(data) -> DataFrame:
             # Number of offerings of the pre reqs in the previous semester
             if (df.at[j, "subjectCourse"] in preReqsList):
                 df.at[i, "# prereqs prev sem"] += 1
+                df.at[i, "# students in prereqs"] += df.at[j, "capacity"]
+
 
             df.at[i,df.at[j, "subjectCourse"]] = 1
 
