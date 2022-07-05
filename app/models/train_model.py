@@ -15,10 +15,14 @@ def train_model_dt(df):
 
     # create a regressor object
     X = df.drop(columns=['capacity'])
+    
     y = df[['capacity']]
 
     # One hot encode 
     X = pd.get_dummies(X, columns=['subjectCourse','semester'])
+    X.drop(columns=['# Offerings', '# prereqs', '# prereqs prev sem',
+       '# students in prereqs', '# Y1', '# Y2', '# Y3', '# Y4', '# Y5+'], inplace=True)
+    print(len(X.columns))
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
@@ -38,11 +42,11 @@ def train_model_dt(df):
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
-    fig = plt.figure(figsize=(60,45))
-    tree.plot_tree(model,
-                   feature_names=X.columns,
-                   filled=True)
-    plt.savefig('tree.png')
+    # fig = plt.figure(figsize=(60,45))
+    # tree.plot_tree(model,
+    #                feature_names=X.columns,
+    #                filled=True)
+    # plt.savefig('tree.png')
     return model
 
 def train_model_xgb(df):
