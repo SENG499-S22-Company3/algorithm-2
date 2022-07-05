@@ -4,16 +4,16 @@ import os
 def pre_process(data) -> DataFrame:
     """Pre-processes JSON data for the ML model"""
     print("Reading input data")
-
-
-
-    # df_p = read_json("/app/featureEngineer/data/preReqData.json")
+  
+    df_p = read_json("app/featureEngineer/data/preReqData.json")
 
     df = DataFrame(data)
+    
     df["subjectCourse"] = df["subject"].astype(str)  + df["code"].astype(str)
     df = df.drop(columns = ['subject', 'code'])
 
     df = df.reset_index(drop=True)
+
     for i in df.index:
          # Get the list of prereqs for this course
         preReqsIndex = df_p[df_p['course'] == df.at[i, "subjectCourse"]].reset_index()
@@ -21,7 +21,7 @@ def pre_process(data) -> DataFrame:
 
         # Set the number of pre reqs
         df.at[i, "# prereqs"] = len(preReqsList)
-
+        
         for j in df.index:
             # Number of offerings of the pre reqs in the previous semester
             if (df.at[j, "subjectCourse"] in preReqsList):
