@@ -45,8 +45,7 @@ def predict_all_years(to_predict: list[int]) -> list[dict]:
     first_year = predict_year_size(to_predict, ["1stYear"])
     second_year = predict_year_size(to_predict, ["2ndYear", "2ndYearTransfer"])
     third_year = predict_year_size(to_predict, ["3rdYear"])
-    fourth_year = predict_year_size(to_predict, ["4thYear"])
-    fifth_year = predict_year_size(to_predict, ["5thYear", "6thYear", "7thYear"])
+    fourth_year = predict_year_size(to_predict, ["4thYear", "5thYear", "6thYear", "7thYear"])
 
     output = []
     for i, year in enumerate(to_predict):
@@ -56,7 +55,6 @@ def predict_all_years(to_predict: list[int]) -> list[dict]:
             "2ndYear": int(second_year[i][0]),
             "3rdYear": int(third_year[i][0]),
             "4thYear": int(fourth_year[i][0]),
-            "5thYear": int(fifth_year[i][0])
         }
         output.append(entry)
 
