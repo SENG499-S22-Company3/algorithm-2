@@ -11,8 +11,8 @@ def model_predict(data,df):
     df = df.drop(columns=['seng_ratio', 'capacity'])
     df.fillna(0, inplace=True, downcast="infer")
 
-    ml_model_pkl = open('app/models/dt_model.pkl', 'rb')
-    ml_model = load(ml_model_pkl)
+    with open('app/models/dt_model.pkl', 'rb') as ml_model_pkl:
+        ml_model = load(ml_model_pkl)
 
     result=ml_model.predict(df)
 
