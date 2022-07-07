@@ -143,7 +143,7 @@ def main() -> None:
     if args.xlsx:
         preprocessed_df.to_excel(str(root) + "/app/models/data/training_data.xlsx", index=False)
     if args.json:
-        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json", index=False)
+        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json", orient='records')
     if args.csv:
         preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv", index=False)
 
