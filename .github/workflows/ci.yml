@@ -50,5 +50,5 @@ jobs:
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: seng499-s22-company3/shared
-          event-type: algorithm-2
+          event-type: company3-algorithm-2
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "repo": "algorithm-2"}'
