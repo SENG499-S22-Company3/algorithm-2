@@ -1,7 +1,7 @@
 
 ## parseHistoricalData.py
 
-Script the goes through the scraped historical data and filters out all unnessecary entries
+Script the goes through the scraped historical data and filters out all unnecessary entries
 
 To run
 
