@@ -14,11 +14,9 @@ def train_model_dt(df):
     print('Creating Decision Tree...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
-
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    X = df.drop(columns=['capacity'])
+    
+    y = df[['capacity']]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
@@ -35,25 +33,42 @@ def train_model_dt(df):
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
 
+    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
+
+    # axes = axes.flatten()
+
+    # for i, v in enumerate(X_train.columns):
+        
+    #     data = X_train[v]
+        
+    #     # plot the actual capacity against the features
+    #     axes[i].scatter(x=data, y=y_train, s=35, ec='white', label='actual')
+        
+    #     # plot predicted capacity against the features
+    #     axes[i].scatter(x=data, y=y_train_pred, c='pink', s=20, ec='white', alpha=0.5, label='predicted')
+
+    #     axes[i].set(title=f'Feature: {v}', ylabel='capacity')
+
+    # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
+
+    # fig.savefig('features_dt.png')
+
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
-    fig = plt.figure(figsize=(60,45))
-    tree.plot_tree(model,
-                   feature_names=X.columns,
-                   filled=True)
-    plt.savefig('tree.png')
+    # fig = plt.figure(figsize=(60,45))
+    # tree.plot_tree(model,
+    #                feature_names=X.columns,
+    #                filled=True)
+    # plt.savefig('tree.png')
     return model
 
 def train_model_xgb(df):
     print('Creating Gradient Boosted Decesion Tree Model...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
-
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    X = df.drop(columns=['capacity'])
+    y = df[['capacity']]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
@@ -72,6 +87,26 @@ def train_model_xgb(df):
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
 
+    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
+
+    # axes = axes.flatten()
+
+    # for i, v in enumerate(X_train.columns):
+        
+    #     data = X_train[v]
+        
+    #     # plot the actual capacity against the features
+    #     axes[i].hist(x=data, bins=15, color='blue', label='actual')
+        
+    #     # plot predicted capacity against the features
+    #     # axes[i].hist(x=y_train_pred, color='pink', label='predicted')
+
+    #     axes[i].set(title=f'Feature: {v}')
+
+    # # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
+
+    # fig.savefig('features_xgb.png')
+
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
@@ -89,11 +124,8 @@ def train_model_rf(df):
     print('Creating Random Forest Model...')
 
     # create a regressor object
-    X = df.drop(columns=['enrollment'])
-    y = df[['enrollment']]
-
-    # Encode sequence number
-    X = pd.get_dummies(X, columns=['subjectCourse'])
+    X = df.drop(columns=['capacity'])
+    y = df[['capacity']]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
@@ -109,6 +141,26 @@ def train_model_rf(df):
 
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
+
+    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
+
+    # axes = axes.flatten()
+
+    # for i, v in enumerate(X_train.columns):
+        
+    #     data = X_train[v]
+        
+    #     # plot the actual capacity against the features
+    #     axes[i].scatter(x=data, y=y_train, s=35, ec='white', label='actual')
+        
+    #     # plot predicted capacity against the features
+    #     axes[i].scatter(x=data, y=y_train_pred, c='pink', s=20, ec='white', alpha=0.5, label='predicted')
+
+    #     axes[i].set(title=f'Feature: {v}', ylabel='capacity')
+
+    # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
+
+    # fig.savefig('features_rf.png')
 
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")

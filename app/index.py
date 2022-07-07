@@ -45,7 +45,7 @@ def predict():
   data = request.get_json()
   df = pre_process(data)
   capacity = model_predict(data,df)
-  return jsonify(capacity)
+  return capacity
 
 
 

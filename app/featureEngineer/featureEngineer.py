@@ -12,7 +12,7 @@ def pre_process(data) -> DataFrame:
         for j in df.index:
                 df.at[i,df.at[j, "subjectCourse"]] = 1
 
-    df = get_dummies(df, columns=['subjectCourse'])
+    df = get_dummies(df, columns=['subjectCourse','semester'])
     df.fillna(0, inplace=True, downcast="infer")
 
     return df
