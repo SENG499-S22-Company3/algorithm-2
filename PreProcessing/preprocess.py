@@ -10,31 +10,30 @@ def pre_process() -> pd.DataFrame:
     df_y = pd.read_json("data/yearEnrollmentData.json")
     df_p = pd.read_json("data/preReqData.json")
 
-    df_c = df_c.assign(**{"semester":"","# Offerings":1, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
+    df_c = df_c.assign(**{"semester":"","# Offerings":0, "# prereqs":0, "# prereqs prev sem":0,"# students in prereqs":0, "# Y1": 0, "# Y2": 0,"# Y3": 0,"# Y4": 0,"# Y5+": 0})
 
     df_c = df_c.rename(columns={"enrollment": "capacity"})
     print("Starting Processing ...")
     for i in tqdm(range(len(df_c.index))):
         year = int(str(df_c.at[i, "term"])[:-2])
         semester = int(str(df_c.at[i, "term"])[-2:])
+
         # If the term is spring or summer semester, the course is part of the previous academic year
-        if semester in (5, 9):
-            semester = 0
-        elif semester in (1,5):
-            semester = 1
-            year = year - 1
-        else:
+        # May to Aug, SUMMER
+        if semester in range(5, 9):
             semester = 2
             year = year - 1
-        
-        match semester:
-            case 1:
-                df_c.at[i, "semester"]='SPRING'
-            case 2:
-                df_c.at[i, "semester"]='SUMMER'
-            case 0:
-                df_c.at[i, "semester"]='FALL'
-
+            df_c.at[i, "semester"]='SUMMER'
+        # Jan to April, SPRING
+        elif semester in range(1,5):
+            semester = 1
+            year = year - 1
+            df_c.at[i, "semester"]='SPRING'
+        # Sep to Dec, FALL
+        else:
+            semester = 0
+            df_c.at[i, "semester"]='FALL'
+            
         # Get the list of prereqs for this course
         preReqsIndex = df_p[df_p['course'] == df_c.at[i, "subjectCourse"]].reset_index()
         preReqsList = preReqsIndex.at[0, "preReqs"]
@@ -57,36 +56,41 @@ def pre_process() -> pd.DataFrame:
             year2 = int(str(df_c.at[j, "term"])[:-2])
             semester2 = int(str(df_c.at[j, "term"])[-2:])
 
-            if semester2 in (5, 9):
-                semester2 = 0
-            elif semester2 in (1,5):
-                semester2 = 1
-                year2 = year2 - 1
-            else:
+            # May to Aug, SUMMER
+            if semester2 in range(5, 9):
                 semester2 = 2
                 year2 = year2 - 1
+            # Jan to April, SPRING
+            elif semester2 in range(1,5):
+                semester2 = 1
+                year2 = year2 - 1
+            # Sep to Dec, FALL
+            else:
+                semester2 = 0
 
-            # Number of times course is offered in an academic year
+            # Number of times course is offered in a semester
             if all([
-                year == year2,
-                df_c.at[i, "subjectCourse"] == df_c.at[j, "subjectCourse"],
-                df_c.at[j, "sequenceNumber"] == "A01",
-                str(df_c.at[i, "term"]) != str(df_c.at[j, "term"])
+                str(df_c.at[i, "term"]) == str(df_c.at[j, "term"]),
+                df_c.at[i, "subjectCourse"] == df_c.at[j, "subjectCourse"]
             ]):
                 df_c.at[i, "# Offerings"] = df_c.at[i, "# Offerings"] + 1
 
             # Number of offerings of the pre reqs in the previous semester
-            if((year == year2) and (semester == (semester2 - 1))) or \
+            if((year == year2) and (semester == 2 and semester2 == 1)) or \
+            ((year == year2) and (semester == 1 and semester2 == 0)) or \
             ((year == (year2 - 1)) and ((semester == 0 and semester2 == 2))):
                 if (df_c.at[j, "subjectCourse"] in preReqsList) and (df_c.at[j, "sequenceNumber"] == "A01"):
                     df_c.at[i, "# prereqs prev sem"] += 1
-                    df_c.at[i, "# students in prereqs"] += df_c.at[j, "capacity"]
+                    if(df_c.at[j, "capacity"] == 0):
+                        df_c.at[i, "# students in prereqs"] += df_c.at[j, "maximumEnrollment"]
+                    else:
+                        df_c.at[i, "# students in prereqs"] += df_c.at[j, "capacity"]
 
             # Different course offered the same semester
             if df_c.at[i, "term"] == df_c.at[j, "term"]:
                 df_c.at[i,df_c.at[j, "subjectCourse"]] = 1
             
-            # Capacity of course
+            # Add all section capacities into the AO1 capacity
             if all([
                 df_c.at[i, "term"] == df_c.at[j, "term"],
                 df_c.at[i, "subjectCourse"] == df_c.at[j, "subjectCourse"],
@@ -95,10 +99,25 @@ def pre_process() -> pd.DataFrame:
             ]):
                 df_c.at[i, "capacity"] =  df_c.at[i, "capacity"] +  df_c.at[j, "capacity"]
 
-    df_c.fillna(0, inplace=True, downcast="infer")
-    df_c = df_c.reset_index(drop=True)
+        # If a class has a capacity of 0, use the maximum enrollment
+        # This is mainly for 2022-2023 classes that dont have this data yet
+        if(df_c.at[i, "capacity"] == 0):
+            df_c.at[i, "capacity"] = df_c.at[i, "maximumEnrollment"]
+                    
+    # Remove all sections other than A01
     df_c = df_c[df_c['sequenceNumber'].str.contains('A01')]
+
+    # Fill in missing data
+    df_c.fillna(0, inplace=True, downcast="infer")
+    
+    # Reset the indexes
+    df_c = df_c.reset_index(drop=True)
+    
+    # Drop columns that won't be used in training
     df_c = df_c.drop(columns=['id', 'term', 'partOfTerm', 'maximumEnrollment','sequenceNumber'])
+
+    # One hot encode 
+    df_c = pd.get_dummies(df_c, columns=['subjectCourse','semester'])
 
     return df_c
 
@@ -122,11 +141,11 @@ def main() -> None:
     print("Run the ../app/models/train_model.py script to train the models using the generated data")
 
     if args.xlsx:
-        preprocessed_df.to_excel(str(root) + "/app/models/data/training_data.xlsx")
+        preprocessed_df.to_excel(str(root) + "/app/models/data/training_data.xlsx", index=False)
     if args.json:
-        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json")
+        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json", orient='records')
     if args.csv:
-        preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv")
+        preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv", index=False)
 
 if __name__ == "__main__":
     main()
