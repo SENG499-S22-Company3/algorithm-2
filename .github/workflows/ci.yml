@@ -21,10 +21,11 @@ jobs:
       - name: Build Docker image
         if: ${{ github.ref == 'refs/heads/main' }}
         run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
+
       - name: Trigger unit tests for Algorithm 2
         if: ${{ github.ref == 'refs/heads/main' }}
-        - uses: actions/checkout@v3
-        - uses: actions/setup-python@v4
+        uses: actions/checkout@v3
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
         run: |
