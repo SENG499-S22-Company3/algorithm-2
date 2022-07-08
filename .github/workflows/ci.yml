@@ -22,6 +22,13 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
 
+      - name: Trigger unit tests for Algorithm 2
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python tests/test_endpoints.py
+
       - name: Log in to Github Package registry
         if: ${{ github.ref == 'refs/heads/main' }}
         run: echo "${{ secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u $ --password-stdin
@@ -43,11 +50,6 @@ jobs:
           echo VERSION=$VERSION
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-
-      - name: Trigger unit tests for Algorithm 2
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: |
-          python tests/test_endpoints.py
 
       - name: Trigger event to execute integration tests
         uses: peter-evans/repository-dispatch@v2
