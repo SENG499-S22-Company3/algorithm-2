@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
+import csv
 from argparse import ArgumentParser
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
@@ -10,8 +11,10 @@ from sklearn.ensemble import RandomForestRegressor
 from pathlib import Path,PurePath
 from xgboost import XGBRegressor
 from sklearn import svm
+from tqdm import tqdm
+import time
 
-def train_model_dt(df):
+def optimize_dt(df):
     print('Creating Decision Tree...')
 
     # create a regressor object
@@ -34,26 +37,6 @@ def train_model_dt(df):
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
 
-    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
-
-    # axes = axes.flatten()
-
-    # for i, v in enumerate(X_train.columns):
-        
-    #     data = X_train[v]
-        
-    #     # plot the actual capacity against the features
-    #     axes[i].scatter(x=data, y=y_train, s=35, ec='white', label='actual')
-        
-    #     # plot predicted capacity against the features
-    #     axes[i].scatter(x=data, y=y_train_pred, c='pink', s=20, ec='white', alpha=0.5, label='predicted')
-
-    #     axes[i].set(title=f'Feature: {v}', ylabel='capacity')
-
-    # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
-
-    # fig.savefig('features_dt.png')
-
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
@@ -64,14 +47,12 @@ def train_model_dt(df):
     # plt.savefig('tree.png')
     return model
 
-def train_model_svm(df):
+def optimize_svm(df):
     print('Creating Decision Tree...')
 
     # create a regressor object
     X = df.drop(columns=['capacity'])
-    
     y = df[['capacity']]
-
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=11)
 
     
@@ -93,8 +74,8 @@ def train_model_svm(df):
     # plt.savefig('tree.png')
     return model
 
-def train_model_xgb(df):
-    print('Creating Gradient Boosted Decesion Tree Model...')
+def optimize_xgb(df):
+    print('Starting Optimization')
 
     # create a regressor object
     X = df.drop(columns=['capacity'])
@@ -102,53 +83,45 @@ def train_model_xgb(df):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=15)
 
-    model = XGBRegressor(gamma=4,
-                    learning_rate=0.01,
-                    max_depth=4,
-                    n_estimators=10000,
-                    subsample=0.8,
-                    random_state=20,
-                    reg_alpha = 0.5)
+    gamma_vals = [0,2,4,6,8,10,12,14,16,18,20]
+    learning_rate_vals = [0.00001, 0.00005, 0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5]
+    max_depth_vals = [2,4,6,8,10,12,14,16,18,20]
+    reg_alpha_vals = [0.00001, 0.00005, 0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5]
 
-    # fit the regressor with X and Y data
-    print("Training Model...")
-    model.fit(X_train, y_train)
+    min_mae = 100
+    with open('data/optimization_results.csv', 'w') as f:
+        w = csv.writer(f)
+        w.writerow(['TrainMAE', 'TestMAE', 'Gamma', 'LearningRate', 'MaxDepth', 'RegAlpha'])
 
-    y_train_pred = model.predict(X_train)
-    y_test_pred = model.predict(X_test)
+        for i in tqdm(range(0,len(gamma_vals))):
+            for j in range(0,len(learning_rate_vals)):
+                for k in range(0,len(max_depth_vals)):
+                    for l in range(0,len(reg_alpha_vals)):
+                        model = XGBRegressor(gamma=gamma_vals[i],
+                        learning_rate=learning_rate_vals[j],
+                        max_depth=max_depth_vals[k],
+                        n_estimators=5000,
+                        random_state=20,
+                        reg_alpha =reg_alpha_vals[l])
 
-    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
+                        # fit the regressor with X and Y data
+                        model.fit(X_train, y_train)
 
-    # axes = axes.flatten()
+                        y_train_pred = model.predict(X_train)
+                        y_test_pred = model.predict(X_test)
 
-    # for i, v in enumerate(X_train.columns):
-        
-    #     data = X_train[v]
-        
-    #     # plot the actual capacity against the features
-    #     axes[i].hist(x=data, bins=15, color='blue', label='actual')
-        
-    #     # plot predicted capacity against the features
-    #     # axes[i].hist(x=y_train_pred, color='pink', label='predicted')
+                        train_mae = mean_absolute_error(y_train_pred, y_train)
+                        test_mae = mean_absolute_error(y_test_pred, y_test)
 
-    #     axes[i].set(title=f'Feature: {v}')
+                        w.writerow([train_mae, test_mae, gamma_vals[i], learning_rate_vals[j], max_depth_vals[k], reg_alpha_vals[l]])
 
-    # # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
+                        if(test_mae < min_mae):
+                            min_mae = test_mae
+                            print(f"New min mae: {min_mae}, Gamma: {gamma_vals[i]}, learning_rate: {learning_rate_vals[j]}, max_depth: {max_depth_vals[k]}, reg_alpha: {reg_alpha_vals[l]}")
 
-    # fig.savefig('features_xgb.png')
+    return
 
-    print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
-    print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
-
-    #fig = plt.figure(figsize=(60,45))
-    #tree.plot_tree(model,
-    #               feature_names=X.columns,
-    #               filled=True)
-    #plt.savefig('xgb_tree.png')
-
-    return model
-
-def train_model_rf(df):
+def optimize_rf(df):
     print('Creating Random Forest Model...')
 
     # create a regressor object
@@ -170,26 +143,6 @@ def train_model_rf(df):
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
 
-    # fig, axes = plt.subplots(ncols=6, nrows=21, figsize=(80, 80))
-
-    # axes = axes.flatten()
-
-    # for i, v in enumerate(X_train.columns):
-        
-    #     data = X_train[v]
-        
-    #     # plot the actual capacity against the features
-    #     axes[i].scatter(x=data, y=y_train, s=35, ec='white', label='actual')
-        
-    #     # plot predicted capacity against the features
-    #     axes[i].scatter(x=data, y=y_train_pred, c='pink', s=20, ec='white', alpha=0.5, label='predicted')
-
-    #     axes[i].set(title=f'Feature: {v}', ylabel='capacity')
-
-    # axes[12].legend(title='capacity', bbox_to_anchor=(1, 1), loc='upper left')
-
-    # fig.savefig('features_rf.png')
-
     print(f"Train MAE: {mean_absolute_error(y_train_pred, y_train)}")
     print(f"Test MAE: {mean_absolute_error(y_test_pred, y_test)}")
 
@@ -199,7 +152,7 @@ def train_model_rf(df):
                    filled=True)
     plt.savefig('rf_tree.png')
 
-    return model
+    return
 
 def main() -> None:
     """Main function."""
@@ -227,22 +180,15 @@ def main() -> None:
     df = df.loc[:, ~df.columns.str.startswith('Unnamed')]
 
     if args.xgb:
-        model = train_model_xgb(df.copy())
-        model_name = 'xgb_model.pkl'
+        optimize_xgb(df.copy())
     if args.rf:
-        model = train_model_rf(df.copy())
-        model_name = 'rf_model.pkl'
+        optimize_rf(df.copy())
     if args.dt:
-        model = train_model_dt(df.copy())
-        model_name = 'dt_model.pkl'
+        optimize_dt(df.copy())
     if args.svm:
-        model = train_model_svm(df.copy())
-        model_name = 'svm_model.pkl'
+        optimize_svm(df.copy())
 
-    print("Training finished, outputting pickel file for model")
-
-    with open(model_name, 'wb') as model_file:
-        pickle.dump(model, model_file)
+    print("Optimiation Finished")
 
 if __name__ == "__main__":
     main()
