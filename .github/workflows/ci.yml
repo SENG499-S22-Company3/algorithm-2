@@ -15,6 +15,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
         # Only build and push docker image if this action is triggered from the main branch.
 
@@ -24,9 +27,6 @@ jobs:
 
       - name: Trigger unit tests for Algorithm 2
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
