@@ -18,11 +18,11 @@ from app.index import app
 
 def load_courses() -> list[dict]:
     """Loads the list of courses that were used to train the model."""
-    with open("app/models/data/training_data.json", "rb") as json_file:
+    with open("app/featureEngineer/data/preReqData.json", "rb") as json_file:
         data = json.load(json_file)
     courses = []
-    for key in data["subjectCourse"].values():
-        courses.append(key)
+    for course in data:
+        courses.append(course["course"])
     return list(dict.fromkeys(courses))
 
 
