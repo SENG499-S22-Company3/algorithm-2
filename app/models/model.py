@@ -25,6 +25,6 @@ def model_predict(data,df):
         if newcapacity_df.at[i,'capacity'] == 0:
             newcapacity_df.at[i,'capacity']=round(result[i])
 
-    return newcapacity_df.to_json(orient="records")
+    return newcapacity_df.to_dict(orient="records")
 
 
