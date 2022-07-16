@@ -2,6 +2,8 @@ from argparse import ArgumentParser
 import pandas as pd
 from pathlib import PurePath
 from tqdm import tqdm
+# import json
+# processedData = []
 
 def pre_process() -> pd.DataFrame:
     """Pre-processes raw JSON data for the ML method of Algorithm 2."""
@@ -15,6 +17,8 @@ def pre_process() -> pd.DataFrame:
     df_c = df_c.rename(columns={"enrollment": "capacity"})
     print("Starting Processing ...")
     for i in tqdm(range(len(df_c.index))):
+        # if df_c.at[i, "subjectCourse"] not in processedData:
+        #     processedData.append(df_c.at[i, "subjectCourse"])
         year = int(str(df_c.at[i, "term"])[:-2])
         semester = int(str(df_c.at[i, "term"])[-2:])
 
@@ -103,7 +107,7 @@ def pre_process() -> pd.DataFrame:
         # This is mainly for 2022-2023 classes that dont have this data yet
         if(df_c.at[i, "capacity"] == 0):
             df_c.at[i, "capacity"] = df_c.at[i, "maximumEnrollment"]
-                    
+
     # Remove all sections other than A01
     df_c = df_c[df_c['sequenceNumber'].str.contains('A01')]
 
@@ -118,7 +122,7 @@ def pre_process() -> pd.DataFrame:
 
     # One hot encode 
     df_c = pd.get_dummies(df_c, columns=['subjectCourse','semester'])
-
+    
     return df_c
 
 def main() -> None:
@@ -146,6 +150,9 @@ def main() -> None:
         preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json", orient='records')
     if args.csv:
         preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv", index=False)
+
+    # with open('data/ClassData2.json', "w", encoding="utf8") as outfile:
+	#     json.dump(processedData, outfile, indent = 4)
 
 if __name__ == "__main__":
     main()
