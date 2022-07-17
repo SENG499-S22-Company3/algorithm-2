@@ -44,8 +44,8 @@ class EndpointTests(BaseCase):
         # Check response code
         self.assertEqual(response.status_code, 200)
 
-    def test_nonzero_capacity(self) -> None:
-        """Tests that the predict_class_size endpoint does not return 0 as a capacity."""
+    def test_nonnegative_capacity(self) -> None:
+        """Tests that the predict_class_size endpoint does not return a negative number as a capacity."""
         # Change this number to modify the number of randomly generated courses
         number_of_test_courses = 100
 
@@ -72,9 +72,9 @@ class EndpointTests(BaseCase):
         # Convert response data to Python object
         response_courses = ast.literal_eval(response.data.decode("UTF-8"))
 
-        # Check that the algorithm does not return 0 as a capacity
+        # Check that the algorithm does not return a negative capacity
         for course in response_courses:
-            self.assertGreater(course["capacity"], 0)
+            self.assertGreater(course["capacity"], -1)
 
 
 if __name__ == "__main__":
