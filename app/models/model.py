@@ -116,20 +116,19 @@ def model_predict(data,df):
                         subjectCourse == capacity_df.at[j, 'subjectCourse'],
                         newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
                     ]):
-                        if newcapacity_df.at[i,'capacity'] < capacity_df.at[j, 'capacity']:
+                        if newcapacity_df.at[i,'capacity'] > capacity_df.at[j, 'capacity']*1.25 or \
+                        newcapacity_df.at[i,'capacity'] < capacity_df.at[j, 'capacity']*0.75:
                             newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
 
         else:
-            #course is hardcoded into the schedule
-            if subjectCourse in hardcoded_course_list:
-                newcapacity_df.at[i,'capacity'] = 0
-            else:
-                #new course being offered
+            #course is not hardcoded into the schedule
+            if subjectCourse not in hardcoded_course_list:
                 if newcapacity_df.at[i,'capacity'] == 0:
                     newcapacity_df.at[i,'capacity'] = 80
+                
 
 
 
-    return newcapacity_df.to_json(orient="records")
+    return newcapacity_df.to_dict(orient="records")
 
 
