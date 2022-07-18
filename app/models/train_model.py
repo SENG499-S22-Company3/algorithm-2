@@ -25,7 +25,8 @@ def train_model_dt(df):
                     max_depth=30,
                     max_leaf_nodes=60,
                     min_samples_leaf=3,
-                    random_state=11)
+                    random_state=11,
+                    ccp_alpha=1)
 
     # fit the regressor with X and Y data
     print("Training Model...")
