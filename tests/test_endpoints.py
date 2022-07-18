@@ -5,7 +5,7 @@ This script uses the unittest framework to implement unit tests for the endpoint
 import ast
 import json
 import unittest
-from test_base import BaseCase
+from .test_base import BaseCase
 
 
 class EndpointTests(BaseCase):
@@ -74,7 +74,8 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm does not return a negative capacity
         for course in response_courses:
-            self.assertGreater(course["capacity"], -1)
+            print(course)
+            self.assertGreater(course["capacity"], 0)
 
 
 if __name__ == "__main__":
