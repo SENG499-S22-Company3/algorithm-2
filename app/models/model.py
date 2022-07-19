@@ -108,7 +108,7 @@ def model_predict(data,df):
         #couse has been seen by ML model
         if subjectCourse in course_list:
             if newcapacity_df.at[i,'capacity'] == 0:
-                newcapacity_df.at[i,'capacity']=round(result[i])
+                newcapacity_df.at[i,'capacity']=abs(round(result[i]))
                 
                 #check to see if capacity is valid
                 for j in capacity_df.index:
@@ -125,8 +125,6 @@ def model_predict(data,df):
             if subjectCourse not in hardcoded_course_list:
                 if newcapacity_df.at[i,'capacity'] == 0:
                     newcapacity_df.at[i,'capacity'] = 80
-                
-
 
 
     return newcapacity_df.to_dict(orient="records")
