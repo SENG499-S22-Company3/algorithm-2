@@ -1,7 +1,6 @@
 from pandas import DataFrame, get_dummies,read_json
-import os
 
-course_list=[
+course_list = [
     "CSC111",
     "CSC115",
     "CSC225",
@@ -68,9 +67,9 @@ def pre_process(data) -> DataFrame:
 
     df = DataFrame(data)
 
-    df = df.assign(**{"# prereqs prev sem":0})
+    df = df.assign(**{"# prereqs prev sem": 0})
     df["subjectCourse"] = df["subject"].astype(str)  + df["code"].astype(str)
-    df = df.drop(columns = ['subject', 'code'])
+    df = df.drop(columns = ["subject", "code"])
 
     df = df.reset_index(drop=True)
 
@@ -79,7 +78,7 @@ def pre_process(data) -> DataFrame:
             df.drop([i])
         else:
             # Get the list of prereqs for this course
-            preReqsIndex = df_p[df_p['course'] == df.at[i, "subjectCourse"]].reset_index()
+            preReqsIndex = df_p[df_p["course"] == df.at[i, "subjectCourse"]].reset_index()
             preReqsList = preReqsIndex.at[0, "preReqs"]
 
             # Set the number of pre reqs
@@ -92,8 +91,8 @@ def pre_process(data) -> DataFrame:
 
                 df.at[i,df.at[j, "subjectCourse"]] = 1
 
-    df = get_dummies(df, columns=['subjectCourse','semester'])
+    df = get_dummies(df, columns=["subjectCourse", "semester"])
     df.fillna(0, inplace=True, downcast="infer")
-    # df.to_csv("feature.csv",index=False)
+    # df.to_csv("feature.csv", index=False)
 
     return df

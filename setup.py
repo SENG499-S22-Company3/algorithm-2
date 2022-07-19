@@ -1,4 +1,3 @@
-
 from app.index import app
 
 # Entry point for server

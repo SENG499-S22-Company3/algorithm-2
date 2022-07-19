@@ -1,7 +1,7 @@
-from pandas import DataFrame, read_json, read_csv, get_dummies
+from pandas import DataFrame, read_json
 from pickle import load
-import json
-course_list=[
+
+course_list = [
     "CSC111",
     "CSC115",
     "CSC225",
@@ -60,7 +60,7 @@ course_list=[
     "SENG466"
 ]
 
-hardcoded_course_list=[
+hardcoded_course_list = [
     "MATH122",
     "ENGR002",
     "MATH109",
@@ -79,28 +79,30 @@ hardcoded_course_list=[
     "STAT260",
     "ECON180",
     "ENGR003",
-    "ENGR004"]
+    "ENGR004"
+]
 
-def model_predict(data,df):
-    """Predict capacity for coures subbmitted using a pretrained ML model"""
+
+def model_predict(data, df):
+    """Predict capacity for courses submitted using a pre-trained ML model"""
     preprocessed_df = read_json('app/models/data/training_data.json')
     capacity_df = read_json('app/models/data/capacity_data.json')
 
     preprocessed_df = preprocessed_df.loc[[0]]
 
-    df = df.merge(preprocessed_df, how='left')
-    # df = df.drop(columns=['seng_ratio', 'capacity'])
+    df = df.merge(preprocessed_df, how="left")
+    # df = df.drop(columns=["seng_ratio", "capacity"])
 
-    df = df[preprocessed_df.drop(columns=['capacity']).columns]
+    df = df[preprocessed_df.drop(columns=["capacity"]).columns]
     df.fillna(0, inplace=True, downcast="infer")
 
-    ml_model_pkl = open('app/models/xgb_model.pkl', 'rb')
+    ml_model_pkl = open("app/models/xgb_model.pkl", "rb")
     ml_model = load(ml_model_pkl)
 
     result=ml_model.predict(df)
     # print(result,ml_model.apply(df))
 
-    newcapacity_df=DataFrame(data)
+    newcapacity_df = DataFrame(data)
     for i in newcapacity_df.index:
         subjectCourse=str(newcapacity_df.at[i,'subject'] + newcapacity_df.at[i,'code'])
 
@@ -127,5 +129,3 @@ def model_predict(data,df):
 
 
     return newcapacity_df.to_dict(orient="records")
-
-
