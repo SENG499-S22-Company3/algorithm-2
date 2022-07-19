@@ -23,7 +23,7 @@ class EndpointTests(BaseCase):
 
         courses = []
         for _ in range(number_of_test_courses):
-            faked_course = self.fake.course()
+            faked_course = self.fake.course(course_type="normal")
             course = {
                 "subject": faked_course["subject"],
                 "code": faked_course["code"],
@@ -44,14 +44,16 @@ class EndpointTests(BaseCase):
         # Check response code
         self.assertEqual(response.status_code, 200)
 
-    def test_nonnegative_capacity(self) -> None:
-        """Tests that the predict_class_size endpoint does not return a negative number as a capacity."""
+    def test_normal_course(self) -> None:
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+            Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
+            Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
         number_of_test_courses = 100
 
         courses = []
         for _ in range(number_of_test_courses):
-            faked_course = self.fake.course()
+            faked_course = self.fake.course(course_type="normal")
             course = {
                 "subject": faked_course["subject"],
                 "code": faked_course["code"],

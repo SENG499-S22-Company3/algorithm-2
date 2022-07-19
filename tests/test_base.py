@@ -15,7 +15,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 from app.index import app
 
-course_list=[
+normal_course_list=[
     "CSC111",
     "CSC115",
     "CSC225",
@@ -74,7 +74,7 @@ course_list=[
     "SENG466"
 ]
 
-hardcoded_course_list=[
+out_of_scope_course_list=[
     "MATH122",
     "ENGR002",
     "MATH109",
@@ -94,10 +94,24 @@ hardcoded_course_list=[
     "ECON180",
     "ENGR003",
     "ENGR004"]
+sample_new_course_list = [
+    "MATH129",
+    "ENGR187",
+    "PHYS143",
+    "MATH191",
+    "CSC227",
+    "SENG188"
+]
 
-def load_courses() -> list[dict]:
+def load_courses(course_type: str) -> list[dict]:
     """Loads the list of courses that were used to train the model."""
-    courses = course_list
+    if course_type == "OOS": # out of scope course
+        courses = out_of_scope_course_list
+    elif course_type == "normal": # normal courses
+        courses = normal_course_list
+    else: # new courses:
+        courses = sample_new_course_list
+
     return list(dict.fromkeys(courses))
 
 
@@ -108,9 +122,9 @@ class CourseProvider(BaseProvider):
         semesters = ["FALL", "SPRING"]
         return random.choice(semesters)
 
-    def course(self) -> dict:
+    def course(self, course_type: str) -> dict:
         """Generates a random course from the list of valid courses."""
-        choice = re.split(r"(\d+)", random.choice(load_courses()))
+        choice = re.split(r"(\d+)", random.choice(load_courses(course_type)))
         course = {
             "subject": choice[0],
             "code": choice[1]
