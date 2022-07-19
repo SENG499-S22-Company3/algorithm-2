@@ -1,6 +1,7 @@
+from pandas import DataFrame, read_json
 from pickle import load
-import json
-course_list=[
+
+course_list = [
     "CSC111",
     "CSC115",
     "CSC225",
@@ -59,7 +60,7 @@ course_list=[
     "SENG466"
 ]
 
-hardcoded_course_list=[
+hardcoded_course_list = [
     "MATH122",
     "ENGR002",
     "MATH109",
@@ -78,10 +79,12 @@ hardcoded_course_list=[
     "STAT260",
     "ECON180",
     "ENGR003",
-    "ENGR004"]
+    "ENGR004"
+]
 
-def model_predict(data,df):
-    """Predict capacity for coures subbmitted using a pretrained ML model"""
+
+def model_predict(data, df):
+    """Predict capacity for courses submitted using a pre-trained ML model"""
     preprocessed_df = read_json('app/models/data/training_data.json')
     capacity_df = read_json('app/models/data/capacity_data.json')
 
