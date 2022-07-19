@@ -8,12 +8,12 @@ from app.featureEngineer.featureEngineer import pre_process
 
 app = Flask(__name__)
 
-@app.route('/healthcheck')
+@app.route("/healthcheck")
 def healthcheck():
-  return 'OK'
+  return "OK"
 
 
-@app.route('/')
+@app.route("/")
 def get_all_courses():
   schema = CourseSchema(many=True)
   seng_courses = schema.dump(
@@ -22,7 +22,7 @@ def get_all_courses():
   return jsonify(seng_courses)
 
 
-@app.route('/seng')
+@app.route("/seng")
 def get_seng_courses():
   schema = CourseSchema(many=True)
   seng_courses = schema.dump(
@@ -31,16 +31,16 @@ def get_seng_courses():
   return jsonify(seng_courses)
 
 
-@app.route('/', methods=['POST'])
+@app.route("/", methods=["POST"])
 def add_course():
   course = CourseSchema().load(request.get_json(), unknown=EXCLUDE)
   course_list.append(course)
   return "", 204
 
 
-@app.route('/predict_class_size', methods=['POST'])
+@app.route("/predict_class_size", methods=["POST"])
 def predict():
   data = request.get_json()
   df = pre_process(data)
-  capacity = model_predict(data,df)
-  return capacity
+  capacity = model_predict(data, df)
+  return jsonify(capacity)
