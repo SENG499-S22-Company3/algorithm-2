@@ -15,14 +15,105 @@ sys.path.insert(1, os.path.join(sys.path[0], ".."))
 
 from app.index import app
 
+normal_course_list=[
+    "CSC111",
+    "CSC115",
+    "CSC225",
+    "CSC226",
+    "CSC230",
+    "CSC320",
+    "CSC360",
+    "CSC361",
+    "CSC370",
+    "ECE300",
+    "ECE310",
+    "ECE320",
+    "ECE330",
+    "ECE340",
+    "ECE360",
+    "ECE455",
+    "ECE458",
+    "ECE488",
+    "SENG265",
+    "SENG275",
+    "SENG310",
+    "SENG321",
+    "SENG371",
+    "SENG401",
+    "SENG468",
+    "SENG474",
+    "CSC355",
+    "ECE216",
+    "ECE241",
+    "ECE250",
+    "ECE255",
+    "ECE260",
+    "ECE350",
+    "ECE355",
+    "ECE356",
+    "ECE365",
+    "ECE370",
+    "ECE380",
+    "ECE399",
+    "ECE403",
+    "ECE463",
+    "SENG350",
+    "SENG360",
+    "ECE220",
+    "ECE242",
+    "ECE299",
+    "ECE410",
+    "ECE499",
+    "SENG426",
+    "SENG440",
+    "SENG499",
+    "CSC460",
+    "SENG411",
+    "SENG421",
+    "SENG435",
+    "SENG466"
+]
 
-def load_courses() -> list[dict]:
+out_of_scope_course_list=[
+    "MATH122",
+    "ENGR002",
+    "MATH109",
+    "MATH100",
+    "MATH110",
+    "ENGR130",
+    "ENGR110",
+    "PHYS110",
+    "MATH101",
+    "ENGR120",
+    "ENGR141",
+    "PHYS111",
+    "ENGR001",
+    "CHEM101",
+    "CHEM150",
+    "STAT260",
+    "ECON180",
+    "ENGR003",
+    "ENGR004"]
+sample_new_course_list = [
+    "MATH129",
+    "ENGR187",
+    "PHYS143",
+    "MATH191",
+    "CSC227",
+    "SENG188"
+]
+
+def load_courses(course_type: str) -> list[dict]:
     """Loads the list of courses that were used to train the model."""
-    with open("app/featureEngineer/data/preReqData.json", "rb") as json_file:
-        data = json.load(json_file)
-    courses = []
-    for course in data:
-        courses.append(course["course"])
+    if course_type == "OOS": # out of scope course
+        courses = out_of_scope_course_list
+    elif course_type == "NORMAL": # normal courses
+        courses = normal_course_list
+    elif course_type == "NEW": # new courses:
+        courses = sample_new_course_list
+    else:
+        raise ValueError("Please supply one of [OOS, NORMAL, NEW]") 
+
     return list(dict.fromkeys(courses))
 
 
@@ -30,12 +121,12 @@ class CourseProvider(BaseProvider):
     """Provides generators for courses."""
     def semester(self) -> str:
         """Generates a random semester."""
-        semesters = ["FALL", "SPRING"]
+        semesters = ["FALL", "SPRING", "SUMMER"]
         return random.choice(semesters)
 
-    def course(self) -> dict:
+    def course(self, course_type: str) -> dict:
         """Generates a random course from the list of valid courses."""
-        choice = re.split(r"(\d+)", random.choice(load_courses()))
+        choice = re.split(r"(\d+)", random.choice(load_courses(course_type)))
         course = {
             "subject": choice[0],
             "code": choice[1]

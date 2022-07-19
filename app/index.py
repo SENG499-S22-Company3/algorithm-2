@@ -1,7 +1,7 @@
 from marshmallow import EXCLUDE
-from flask import Flask, jsonify, request
-from app.models.course import CourseSchema
-from app.models.model import model_predict
+from numpy import equal
+
+from app.models.course import Course, CourseSchema, Semester
 from app.data.course_path import course_list
 from app.featureEngineer.featureEngineer import pre_process
 
@@ -41,6 +41,11 @@ def add_course():
 @app.route("/predict_class_size", methods=["POST"])
 def predict():
   data = request.get_json()
-  df = pre_process(data)
-  capacity = model_predict(data, df)
-  return jsonify(capacity)
+  if data != []:
+    df = pre_process(data)
+    data = model_predict(data,df)
+  return jsonify(data)
+
+
+
+
