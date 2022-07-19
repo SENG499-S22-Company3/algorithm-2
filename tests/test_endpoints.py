@@ -47,7 +47,7 @@ class EndpointTests(BaseCase):
 
     ####### UNIT TESTS MAIN USE CASES #######
     def test_normal_course_case1(self) -> None:
-        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC)
             Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)"""
         # Change this number to modify the number of randomly generated courses
         number_of_test_courses = 100
@@ -80,7 +80,7 @@ class EndpointTests(BaseCase):
             self.assertGreater(course["capacity"], 0)
 
     def test_normal_course_case2(self) -> None:
-        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC)
             Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
         number_of_test_courses = 100
@@ -179,7 +179,7 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm does not change the input capacity
         for course in response_courses:
-            self.assertEqual(course["capacity"],  course['input_capacity']) 
+            self.assertEqual(course["capacity"],  course['input_capacity'])
 
     def test_new_course_case2(self) -> None:
         """ New courses that are being offered for the first time must have default capacity of 80 (CSC227)
@@ -212,7 +212,7 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm assigns default 80 capacity
         for course in response_courses:
-            self.assertEqual(course["capacity"], 80)    
+            self.assertEqual(course["capacity"], 80)
 
 
 if __name__ == "__main__":
