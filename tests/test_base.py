@@ -107,10 +107,12 @@ def load_courses(course_type: str) -> list[dict]:
     """Loads the list of courses that were used to train the model."""
     if course_type == "OOS": # out of scope course
         courses = out_of_scope_course_list
-    elif course_type == "normal": # normal courses
+    elif course_type == "NORMAL": # normal courses
         courses = normal_course_list
-    else: # new courses:
+    elif course_type == "NEW": # new courses:
         courses = sample_new_course_list
+    else:
+        raise ValueError("Please supply one of [OOS, NORMAL, NEW]") 
 
     return list(dict.fromkeys(courses))
 
@@ -119,7 +121,7 @@ class CourseProvider(BaseProvider):
     """Provides generators for courses."""
     def semester(self) -> str:
         """Generates a random semester."""
-        semesters = ["FALL", "SPRING"]
+        semesters = ["FALL", "SPRING", "SUMMER"]
         return random.choice(semesters)
 
     def course(self, course_type: str) -> dict:

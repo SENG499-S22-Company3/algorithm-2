@@ -23,7 +23,7 @@ class EndpointTests(BaseCase):
 
         courses = []
         for _ in range(number_of_test_courses):
-            faked_course = self.fake.course(course_type="normal")
+            faked_course = self.fake.course(course_type="NORMAL")
             course = {
                 "subject": faked_course["subject"],
                 "code": faked_course["code"],
@@ -53,7 +53,7 @@ class EndpointTests(BaseCase):
 
         courses = []
         for _ in range(number_of_test_courses):
-            faked_course = self.fake.course(course_type="normal")
+            faked_course = self.fake.course(course_type="NORMAL")
             course = {
                 "subject": faked_course["subject"],
                 "code": faked_course["code"],
@@ -77,6 +77,75 @@ class EndpointTests(BaseCase):
         # Check that the algorithm does not return a negative capacity
         for course in response_courses:
             self.assertGreater(course["capacity"], 0)
+
+    def test_oos_course(self) -> None:
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+            Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
+            Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
+        # Change this number to modify the number of randomly generated courses
+        number_of_test_courses = 100
+
+        courses = []
+        for _ in range(number_of_test_courses):
+            faked_course = self.fake.course(course_type="OOS")
+            course = {
+                "subject": faked_course["subject"],
+                "code": faked_course["code"],
+                "seng_ratio": self.fake.pyfloat(left_digits=1,
+                                                right_digits=2,
+                                                max_value=1,
+                                                positive=True),
+                "semester": self.fake.semester(),
+                "capacity": 0
+            }
+            courses.append(course)
+
+        payload = json.dumps(courses)
+        response = self.app.post("/predict_class_size",
+                                 data=payload,
+                                 content_type="application/json")
+
+        # Convert response data to Python object
+        response_courses = ast.literal_eval(response.data.decode("UTF-8"))
+
+        # Check that the algorithm does not return a negative capacity
+        for course in response_courses:
+            self.assertEqual(course["capacity"], 0)
+
+
+    def test_new_course(self) -> None:
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+            Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
+            Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
+        # Change this number to modify the number of randomly generated courses
+        number_of_test_courses = 100
+
+        courses = []
+        for _ in range(number_of_test_courses):
+            faked_course = self.fake.course(course_type="NEW")
+            course = {
+                "subject": faked_course["subject"],
+                "code": faked_course["code"],
+                "seng_ratio": self.fake.pyfloat(left_digits=1,
+                                                right_digits=2,
+                                                max_value=1,
+                                                positive=True),
+                "semester": self.fake.semester(),
+                "capacity": 0
+            }
+            courses.append(course)
+
+        payload = json.dumps(courses)
+        response = self.app.post("/predict_class_size",
+                                 data=payload,
+                                 content_type="application/json")
+
+        # Convert response data to Python object
+        response_courses = ast.literal_eval(response.data.decode("UTF-8"))
+
+        # Check that the algorithm does not return a negative capacity
+        for course in response_courses:
+            self.assertEqual(course["capacity"], 80)    
 
 
 if __name__ == "__main__":
