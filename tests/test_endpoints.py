@@ -74,7 +74,6 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm does not return a negative capacity
         for course in response_courses:
-            print(course)
             self.assertGreater(course["capacity"], 0)
 
 
