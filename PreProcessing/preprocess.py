@@ -141,11 +141,11 @@ def main() -> None:
     print("Run the ../app/models/train_model.py script to train the models using the generated data")
 
     if args.xlsx:
-        preprocessed_df.to_excel(str(root) + "/app/models/data/training_data.xlsx", index=False)
+        preprocessed_df.to_excel(str(root) + "/app/models/ml_models/data/training_data.xlsx", index=False)
     if args.json:
-        preprocessed_df.to_json(str(root) + "/app/models/data/training_data.json", orient='records')
+        preprocessed_df.to_json(str(root) + "/app/models/ml_models/data/training_data.json", orient='records')
     if args.csv:
-        preprocessed_df.to_csv(str(root) + "/app/models/data/training_data.csv", index=False)
+        preprocessed_df.to_csv(str(root) + "/app/models/ml_models/data/training_data.csv", index=False)
 
 if __name__ == "__main__":
     main()

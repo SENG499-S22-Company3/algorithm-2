@@ -1,11 +1,13 @@
 from pandas import DataFrame, read_json, read_csv, get_dummies
 from pickle import load
 import json
+from pathlib import Path,PurePath
 
 def model_predict(data,df):
     """Predict capacity for coures subbmitted using a pretrained ML model"""
-    preprocessed_df = read_json('app/models/data/training_data.json')
+    root=PurePath(__file__).parents[0]
 
+    preprocessed_df = read_json(str(root) + "/ml_models/data/training_data.json")
     preprocessed_df = preprocessed_df.loc[[0]]
 
     df = df.merge(preprocessed_df, how='left')
@@ -14,7 +16,7 @@ def model_predict(data,df):
     df = df[preprocessed_df.drop(columns=['capacity']).columns]
     df.fillna(0, inplace=True, downcast="infer")
 
-    ml_model_pkl = open('app/models/xgb_model.pkl', 'rb')
+    ml_model_pkl = open(str(root) + "/ml_models/xgb_model.pkl", 'rb')
     ml_model = load(ml_model_pkl)
 
     result=ml_model.predict(df)
@@ -26,5 +28,3 @@ def model_predict(data,df):
             newcapacity_df.at[i,'capacity']=round(result[i])
 
     return newcapacity_df.to_dict(orient="records")
-
-
