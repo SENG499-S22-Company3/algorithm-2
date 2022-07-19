@@ -35,6 +35,14 @@ class Course:
                  {self.semester}, {self.year}, {self.prereqs}, {self.coreqs}, \
                  {self.required_year})"
 
+    def __eq__(self, other):
+        """Compare courses"""
+        if not isinstance(other, Course):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.name == other.name
+
 
 class CourseField(fields.Field):
     """Field that serializes to a string representation of a course and
