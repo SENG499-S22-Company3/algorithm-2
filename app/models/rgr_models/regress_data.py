@@ -4,11 +4,12 @@ import pandas
 from sklearn import linear_model
 from collections import defaultdict
 import sys, os
+import pickle
 
 PATH = os.path.join(os.path.dirname(__file__), "..")
 sys.path.append(PATH)
 
-from enrollment_prediction import predict_enrollment
+from app.models.rgr_models.enrollment_prediction.predict_enrollment import predict_year_size, predict_all_years
 
 pandas.options.mode.chained_assignment = None
 
@@ -16,7 +17,7 @@ PARSE_OUTPUT_PATH = "/data/output.json"
 ENROLLMENT_DATA_PATH = "/data/yearEnrollmentData.json"
 
 course_list_to_predict = {
-    "CSC111",
+   "CSC111",
     "CSC115",
     "CSC225",
     "CSC226",
@@ -67,7 +68,11 @@ course_list_to_predict = {
     "SENG426",
     "SENG440",
     "SENG499",
-    "CSC460"
+    #"CSC460",
+    #"SENG411",
+    #"SENG421",
+    #"SENG435",
+    #"SENG466"
 }
 
 def load_json(json_file: str) -> list[dict]:
@@ -166,7 +171,7 @@ def predict_enrollment_year(regr_model_dictionary, semester, year_to_predict):
     - year_to_predict: single integer specifying the year for which to predict (2022)
     """
 
-    year_list = [(key, value) for key, value in predict_enrollment.predict_all_years([year_to_predict])[0].items()]
+    year_list = [(key, value) for key, value in predict_all_years([year_to_predict])[0].items()]
     output_list = []
     
     for course in course_list_to_predict:
@@ -181,10 +186,13 @@ def predict_enrollment_year(regr_model_dictionary, semester, year_to_predict):
 def main():
 
     course_regr_models = create_regress_models()
+
     predicted_list = predict_enrollment_year(course_regr_models, 0, 2022)
     for element in predicted_list:
         print(element)
     
-
+    with open("rgr_model.pkl", 'wb') as model_file:
+        pickle.dump(course_regr_models, model_file)
+    
 if __name__ == "__main__":
         main()

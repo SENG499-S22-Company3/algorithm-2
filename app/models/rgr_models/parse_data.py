@@ -62,7 +62,11 @@ course_list=[
     "SENG426",
     "SENG440",
     "SENG499",
-    "CSC460"
+    #"CSC460",
+    #"SENG411",
+    #"SENG421",
+    #"SENG435",
+    #"SENG466"
 ]
 
 def load_json(json_file: str) -> list[dict]:
@@ -137,7 +141,6 @@ def main() -> None:
     # Setup input and output file paths
     script_dir = os.path.dirname(__file__)
     abs_in_file_path = os.path.join(script_dir, RAW_COURSE_DATA_FILE)
-    print(abs_in_file_path)
     output_dir = os.path.join(script_dir, "data\\")
 
     # Parse and filter the data

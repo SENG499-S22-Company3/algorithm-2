@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 from sklearn.linear_model import LinearRegression
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../data"))
-from enrollment_prediction.enrollment_data import year_data
+from app.models.rgr_models.enrollment_prediction.enrollment_data import year_data
 
 ENROLLMENT_DATA = sorted(year_data, key=lambda d: d["year"])
 
