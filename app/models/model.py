@@ -1,4 +1,4 @@
-from pandas import DataFrame, read_json, read_csv, get_dummies
+from pandas import DataFrame, read_json
 from pickle import load
 import json
 from pathlib import Path,PurePath
@@ -62,7 +62,7 @@ course_list = [
     "SENG466"
 ]
 
-hardcoded_course_list=[
+hardcoded_course_list = [
     "MATH122",
     "ENGR002",
     "MATH109",
@@ -81,7 +81,9 @@ hardcoded_course_list=[
     "STAT260",
     "ECON180",
     "ENGR003",
-    "ENGR004"]
+    "ENGR004"
+]
+
 
 def model_predict(data,df):
     """Predict capacity for coures subbmitted using a pretrained ML model"""
@@ -95,7 +97,7 @@ def model_predict(data,df):
     df = df.merge(preprocessed_df, how='left')
     # df = df.drop(columns=['seng_ratio', 'capacity'])
 
-    df = df[preprocessed_df.drop(columns=['capacity']).columns]
+    df = df[preprocessed_df.drop(columns=["capacity"]).columns]
     df.fillna(0, inplace=True, downcast="infer")
 
     ml_model_pkl = open(str(root) + "/ml_models/xgb_model.pkl", 'rb')

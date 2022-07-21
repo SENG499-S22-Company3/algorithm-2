@@ -11,7 +11,7 @@ import unittest
 from faker import Faker
 from faker.providers import BaseProvider
 
-sys.path.insert(1, os.path.join(sys.path[0], '..'))
+sys.path.insert(1, os.path.join(sys.path[0], ".."))
 
 from app.index import app
 

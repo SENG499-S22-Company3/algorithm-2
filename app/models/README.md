@@ -10,7 +10,7 @@ python train_data.py <model type flag> <input file type flag>
 ```
 
 Model flags
-- -dt, Decesion Tree Regressor
+- -dt, Decision Tree Regressor
 - -rf, Random Forest Regressor
 - -xgb, Gradient Boosted Regressor
 

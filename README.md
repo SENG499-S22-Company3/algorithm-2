@@ -44,17 +44,15 @@ Other possible fields are "department" (string), "class_size" (int), "semester" 
 
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '{
+curl -X POST -H "Content-Type: application/json" -d '[
     { "subject": <COURSE SUBJECT>,
      "code": <COURSE CODE>,
       "seng_ratio": <RATIO OF SENG STUDENTS>,
       "semester": <SEMESTER>,
       "capacity": <CAPICITY OF COURSE>}
-}' http://localhost:5000/predict_class_size
+]' http://localhost:5000/predict_class_size
 ```
 
  The required fields are "subject" (string), "code" (string), "seng_ratio" (int), "semester" (string), and "capacity" (int).
 
- The capcity of the course must be set to 0 for the machine learning model to predict a course capcity, or else the same
- capacity value will be returned.
-
+ The capacity of the course must be set to 0 for the machine learning model to predict a course capacity, or else the same capacity value will be returned.

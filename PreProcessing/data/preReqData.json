@@ -1,312 +1,312 @@
 [
-	{
+    {
         "course": "CSC111",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC115",
         "preReqs": ["CSC111"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC225",
         "preReqs": ["CSC115", "MATH122"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC226",
         "preReqs": ["CSC225"],
-    	"coReq" : ["CSC360"]
-	},
-	{
+        "coReq" : ["CSC360"]
+    },
+    {
         "course": "CSC230",
         "preReqs": ["MATH122", "CSC115"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC320",
         "preReqs": ["CSC226"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC355",
         "preReqs": ["ECE255", "CSC230", "MATH122"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC360",
         "preReqs": ["ECE255", "CSC230", "SENG265"],
-    	"coReq" : ["CSC226"]
-	},
-	{
+        "coReq" : ["CSC226"]
+    },
+    {
         "course": "CSC361",
         "preReqs": ["ECE255", "CSC230", "SENG265"],
-    	"coReq" : ["CSC226"]
-	},
-	{
+        "coReq" : ["CSC226"]
+    },
+    {
         "course": "CSC370",
         "preReqs": ["SENG265", "CSC226"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "CSC460",
         "preReqs": ["ECE355", "CSC355", "CSC360"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE216",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE220",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE241",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE242",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE250",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE255",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE260",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE299",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE300",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE310",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE320",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE330",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE340",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE350",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE355",
         "preReqs": ["ECE255", "CSC230", "MATH122"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE356",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE360",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE365",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE370",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE380",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE399",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE403",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE410",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE455",
         "preReqs": ["ECE355", "CSC355", "CSC360"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE458",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE463",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE488",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE499",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ENG371",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG265",
         "preReqs": ["CSC115"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG275",
         "preReqs": ["SENG265"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG310",
         "preReqs": ["SENG265"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG321",
         "preReqs": ["SENG265"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG350",
         "preReqs": ["SENG275"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG360",
         "preReqs": ["SENG265"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG401",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG411",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG421",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG426",
         "preReqs": ["SENG371", "SENG275"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG435",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG440",
         "preReqs": ["ECE355", "CSC355"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG466",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG468",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG474",
         "preReqs": [],
-    	"coReq" : []
-	},
+        "coReq" : []
+    },
     {
         "course": "MATH122",
         "preReqs": [],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ENGR002",
         "preReqs": ["MATH122"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG371",
         "preReqs": ["SENG275"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG426",
         "preReqs": ["SENG371", "SENG275"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "ECE458",
         "preReqs": ["ECE255", "CSC230", "SENG265"],
-    	"coReq" : ["CSC226"]
-	},
-	{
+        "coReq" : ["CSC226"]
+    },
+    {
         "course": "SENG455",
         "preReqs": ["ECE355", "CSC355", "CSC360"],
-    	"coReq" : []
-	},
-	{
+        "coReq" : []
+    },
+    {
         "course": "SENG499",
         "preReqs": ["ENGR002", "ECE458", "CSC361", "CSC370", "SENG321", "SENG350"],
-    	"coReq" : []
-	}
+        "coReq" : []
+    }
 ]

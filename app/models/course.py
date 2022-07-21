@@ -1,15 +1,17 @@
-from typing import Any, Mapping
 from enum import Enum
+from typing import Any, Mapping
 from marshmallow import Schema, fields, post_load, ValidationError
 
 
 class Semester(Enum):
+    """An enum for representing the semesters in a school year."""
     FALL   = 0
     SPRING = 1
     SUMMER = 2
 
 
 class Course:
+    """An object for representing a course."""
     def __init__(self, name: str, department: str=None, class_size: int=0,
                  semester: Semester=None, year: int=None, prereqs: list=None,
                  coreqs: list=None, required_year: int=None) -> None:
@@ -62,6 +64,7 @@ class CourseField(fields.Field):
 
 
 class CourseSchema(Schema):
+    """Schema for course representation."""
     name = fields.Str()
     department = fields.Str()
     class_size = fields.Integer()
@@ -70,5 +73,6 @@ class CourseSchema(Schema):
     prereqs = fields.List(fields.List(CourseField()))
 
     @post_load
-    def create_course(self, data, **kwargs):
+    def create_course(self, data, **kwargs) -> Course:
+        """Creates a Course object from a POST request."""
         return Course(**data)

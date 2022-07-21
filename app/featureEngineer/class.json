@@ -1,23 +1,23 @@
 [
     {
-        "subject":"SENG",
+        "subject": "SENG",
         "code": "321",
         "seng_ratio": 0.75,
         "semester": "FALL",
-        "capacity":0
+        "capacity": 0
     },
     {
-        "subject":"SENG",
+        "subject": "SENG",
         "code": "499",
         "seng_ratio": 0.75,
         "semester": "FALL",
-        "capacity":0
-    },{
-        "subject":"CSC",
+        "capacity": 0
+    },
+    {
+        "subject": "CSC",
         "code": "111",
         "seng_ratio": 0.75,
         "semester": "FALL",
-        "capacity":0
+        "capacity": 0
     }
 ]
-
