@@ -5,7 +5,7 @@ This script uses the unittest framework to implement unit tests for the endpoint
 import ast
 import json
 import unittest
-from .test_base import BaseCase
+from test_base import BaseCase
 
 
 class EndpointTests(BaseCase):
@@ -45,7 +45,7 @@ class EndpointTests(BaseCase):
         self.assertEqual(response.status_code, 200)
 
     def test_normal_course(self) -> None:
-        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC)
             Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
             Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
@@ -79,7 +79,7 @@ class EndpointTests(BaseCase):
             self.assertGreater(course["capacity"], 0)
 
     def test_oos_course(self) -> None:
-        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC)
             Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
             Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
@@ -114,7 +114,7 @@ class EndpointTests(BaseCase):
 
 
     def test_new_course(self) -> None:
-        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for courses we must make a prediction on (ECE/SENG/CSC)
             Case 1: input capacity is > 0 so output capacity == input capacity (unchanged)
             Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
@@ -145,10 +145,10 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm does not return a negative capacity
         for course in response_courses:
-            self.assertEqual(course["capacity"], 80)    
+            self.assertEqual(course["capacity"], 80)
 
     def test_duplicate_courses(self) -> None:
-        """ Tests returned capacity for duplicate courses we must make a prediction on (ECE/SENG/CSC) 
+        """ Tests returned capacity for duplicate courses we must make a prediction on (ECE/SENG/CSC)
             Case: Duplicate courses in the same semester should all output the same capacity"""
         # Change this number to modify the number of generated courses
         number_of_test_courses = 100
@@ -180,7 +180,7 @@ class EndpointTests(BaseCase):
 
         # Check that the algorithm returns the same capacity for duplicate courses
         for course in response_courses:
-            self.assertEqual(response_courses[0]["capacity"], course["capacity"])    
+            self.assertEqual(response_courses[0]["capacity"], course["capacity"])
 
 
 if __name__ == "__main__":
