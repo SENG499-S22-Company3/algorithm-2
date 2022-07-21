@@ -139,20 +139,17 @@ def model_predict(data,df):
                     newcapacity_df.at[i,'capacity'] = ml_prediction
 
             # #check to see if capacity is valid
-            # for j in capacity_df.index:
-            #     if all([
-            #         subjectCourse == capacity_df.at[j, 'subjectCourse'],
-            #         newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
-            #     ]):
-            #         if newcapacity_df.at[i,'capacity'] > capacity_df.at[j, 'capacity']*1.25 or \
-            #         newcapacity_df.at[i,'capacity'] < capacity_df.at[j, 'capacity']*0.75:
-            #             newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
+            if newcapacity_df.at[i,'capacity'] < 10:
+                for j in capacity_df.index:
+                    if all([
+                        subjectCourse == capacity_df.at[j, 'subjectCourse'],
+                        newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
+                    ]):
+                        newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
 
         else:
             #course is not hardcoded into the schedule
             if subjectCourse not in hardcoded_course_list:
                 if newcapacity_df.at[i,'capacity'] == 0:
                     newcapacity_df.at[i,'capacity'] = 80
-
-
     return newcapacity_df.to_dict(orient="records")

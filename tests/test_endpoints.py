@@ -50,7 +50,6 @@ class EndpointTests(BaseCase):
             Case 2: input capacity == 0 so output capacity > 0 (predicted)"""
         # Change this number to modify the number of randomly generated courses
         number_of_test_courses = 100
-
         courses = []
         for _ in range(number_of_test_courses):
             faked_course = self.fake.course(course_type="NORMAL")
