@@ -87,12 +87,11 @@ hardcoded_course_list = [
 
 def model_predict(data,df):
     """Predict capacity for coures subbmitted using a pretrained ML model"""
-    root=PurePath(__file__).parents[0]
 
-    preprocessed_df = read_json(str(root) + "/ml_models/data/training_data.json")
+    preprocessed_df = read_json("app/models/ml_models/data/training_data.json")
     preprocessed_df = preprocessed_df.loc[[0]]
 
-    capacity_df = read_json(str(root) + "/ml_models/data/capacity_data.json")
+    capacity_df = read_json("app/models/ml_models/data/capacity_data.json")
 
     df = df.merge(preprocessed_df, how='left')
     # df = df.drop(columns=['seng_ratio', 'capacity'])
@@ -100,10 +99,10 @@ def model_predict(data,df):
     df = df[preprocessed_df.drop(columns=["capacity"]).columns]
     df.fillna(0, inplace=True, downcast="infer")
 
-    ml_model_pkl = open(str(root) + "/ml_models/xgb_model.pkl", 'rb')
+    ml_model_pkl = open("app/models/ml_models/xgb_model.pkl", 'rb')
     ml_model = load(ml_model_pkl)
 
-    rgr_model_pkl = open(str(root) + "/rgr_models/rgr_model.pkl", 'rb')
+    rgr_model_pkl = open("app/models/rgr_models/rgr_model.pkl", 'rb')
     rgr_model = load(rgr_model_pkl)
 
     ml_results=ml_model.predict(df)
@@ -138,14 +137,14 @@ def model_predict(data,df):
                 else:
                     newcapacity_df.at[i,'capacity'] = ml_prediction
 
-            # #check to see if capacity is valid
-            if newcapacity_df.at[i,'capacity'] < 10:
-                for j in capacity_df.index:
-                    if all([
-                        subjectCourse == capacity_df.at[j, 'subjectCourse'],
-                        newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
-                    ]):
-                        newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
+                #check to see if capacity is valid
+                if newcapacity_df.at[i,'capacity'] < 10:
+                    for j in capacity_df.index:
+                        if all([
+                            subjectCourse == capacity_df.at[j, 'subjectCourse'],
+                            newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
+                        ]):
+                            newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
 
         else:
             #course is not hardcoded into the schedule
