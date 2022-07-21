@@ -7,7 +7,7 @@ from csv import DictWriter
 import os
 import json
 
-RAW_COURSE_DATA_FILE = "data/course_data.json"
+RAW_COURSE_DATA_FILE = "data/uniqueClassData.json"
 RAW_ENROLLMENT_DATA_FILE = "data/yearEnrollmentData.json"
 
 course_list=[
@@ -62,11 +62,11 @@ course_list=[
     "SENG426",
     "SENG440",
     "SENG499",
-    #"CSC460",
-    #"SENG411",
-    #"SENG421",
-    #"SENG435",
-    #"SENG466"
+    "CSC460",
+    "SENG411",
+    "SENG421",
+    "SENG435",
+    "SENG466"
 ]
 
 def load_json(json_file: str) -> list[dict]:
@@ -94,18 +94,10 @@ def parse_json(json_file: str) -> list[dict]:
 
             parsed_course["id"] = course["id"]
             parsed_course["term"] = course["term"]
-            parsed_course["termDesc"] = course["termDesc"]
-            parsed_course["courseReferenceNumber"] = course["courseReferenceNumber"]
-            parsed_course["courseNumber"] = course["courseNumber"]
-            parsed_course["subject"] = course["subject"]
+            parsed_course["courseNumber"] = course["subjectCourse"][-3:]
+            parsed_course["subject"] = course["subjectCourse"][:-3]
             parsed_course["sequenceNumber"] = course["sequenceNumber"]
-            parsed_course["scheduleTypeDescription"] = course["scheduleTypeDescription"]
-            parsed_course["courseTitle"] = course["courseTitle"]
-            parsed_course["maximumEnrollment"] = course["maximumEnrollment"]
             parsed_course["enrollment"] = course["enrollment"]
-            parsed_course["waitCapacity"] = course["waitCapacity"]
-            parsed_course["waitCount"] = course["waitCount"]
-            parsed_course["instructionalMethod"] = course["instructionalMethod"]
 
             parsed_data.append(parsed_course)
 

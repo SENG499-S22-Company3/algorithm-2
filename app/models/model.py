@@ -3,7 +3,7 @@ from pickle import load
 import json
 from pathlib import Path,PurePath
 from app.models.rgr_models.regress_data import predict_enrollment_year
-course_list=[
+course_list = [
     "CSC111",
     "CSC115",
     "CSC225",
@@ -105,26 +105,46 @@ def model_predict(data,df):
     rgr_model = load(rgr_model_pkl)
 
     ml_results=ml_model.predict(df)
-    #rgr_results=predict_enrollment_year(rgr_model, data)
+    
+    rgr_results_fall = predict_enrollment_year(rgr_model, 0, 2019)
+    rgr_results_spring = predict_enrollment_year(rgr_model, 1, 2019)
+    rgr_results_summer = predict_enrollment_year(rgr_model, 2, 2019)
 
     newcapacity_df=DataFrame(data)
+
+    input_course_list_size = len(ml_results)
+    alpha_value = ((input_course_list_size/len(course_list))**2)*0.9
+
     for i in newcapacity_df.index:
         subjectCourse=str(newcapacity_df.at[i,'subject'] + newcapacity_df.at[i,'code'])
 
-        #couse has been seen by ML model
+        #course has been seen by ML model
         if subjectCourse in course_list:
             if newcapacity_df.at[i,'capacity'] == 0:
-                newcapacity_df.at[i,'capacity']=abs(round(ml_results[i]))
+                ml_prediction = abs(round(ml_results[i]))
+                
+                if subjectCourse in rgr_model:
+                    rgr_prediction = 0
+                    if newcapacity_df.at[i,'semester'] == 'FALL':
+                        rgr_prediction = rgr_results_fall[subjectCourse]
+                    elif newcapacity_df.at[i,'semester'] == 'SPRING':
+                        rgr_prediction = rgr_results_spring[subjectCourse]
+                    elif newcapacity_df.at[i,'semester'] == 'SUMMER':
+                        rgr_prediction = rgr_results_summer[subjectCourse]
 
-                #check to see if capacity is valid
-                for j in capacity_df.index:
-                    if all([
-                        subjectCourse == capacity_df.at[j, 'subjectCourse'],
-                        newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
-                    ]):
-                        if newcapacity_df.at[i,'capacity'] > capacity_df.at[j, 'capacity']*1.25 or \
-                        newcapacity_df.at[i,'capacity'] < capacity_df.at[j, 'capacity']*0.75:
-                            newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
+                    newcapacity_df.at[i,'capacity'] = abs(round((ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))))
+                else:
+                    newcapacity_df.at[i,'capacity'] = ml_prediction
+
+            # #check to see if capacity is valid
+            # for j in capacity_df.index:
+            #     if all([
+            #         subjectCourse == capacity_df.at[j, 'subjectCourse'],
+            #         newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
+            #     ]):
+            #         if newcapacity_df.at[i,'capacity'] > capacity_df.at[j, 'capacity']*1.25 or \
+            #         newcapacity_df.at[i,'capacity'] < capacity_df.at[j, 'capacity']*0.75:
+            #             newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
 
         else:
             #course is not hardcoded into the schedule
