@@ -93,6 +93,5 @@ def pre_process(data) -> DataFrame:
 
     df = get_dummies(df, columns=["subjectCourse", "semester"])
     df.fillna(0, inplace=True, downcast="infer")
-    # df.to_csv("feature.csv", index=False)
-
+    # df.to_csv("feature.csv",index=False)
     return df
