@@ -17,4 +17,6 @@ EXPOSE 5000
 
 ENV FLASK_APP=setup.py
 
+RUN python3.10 -m venv venv
+
 CMD ["/app/bootstrap.sh"]
