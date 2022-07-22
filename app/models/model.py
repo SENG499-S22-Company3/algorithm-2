@@ -134,7 +134,7 @@ def model_predict(data,df):
                     else:
                         rgr_prediction = abs(round(rgr_results_summer[subjectCourse]))
 
-                    newcapacity_df.at[i,'capacity'] = (ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))
+                    newcapacity_df.at[i,'capacity'] = abs(round((ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))))
                 else:
                     newcapacity_df.at[i,'capacity'] = ml_prediction
 
