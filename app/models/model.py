@@ -1,3 +1,4 @@
+from decimal import Rounded
 from pandas import DataFrame, read_json
 from pickle import load
 import json
@@ -136,18 +137,22 @@ def model_predict(data,df):
 
                     newcapacity_df.at[i,'capacity'] = abs(round((ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))))
                 else:
-                    newcapacity_df.at[i,'capacity'] = ml_prediction
+                    newcapacity_df.at[i,'capacity'] =  abs(round(ml_prediction))
 
                 #check to see if capacity is valid
-                if newcapacity_df.at[i,'capacity'] < 10:
-                    for j in capacity_df.index:
-                        if all([
-                            subjectCourse == capacity_df.at[j, 'subjectCourse'],
-                            newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
-                        ]):
-                            newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
+                for j in capacity_df.index:
+                    if all([
+                        subjectCourse == capacity_df.at[j, 'subjectCourse'],
+                        newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
+                    ]):
+                        if newcapacity_df.at[i,'capacity'] < (capacity_df.at[j,'capacity']*0.75):
+                            newcapacity_df.at[i,'capacity'] = round(capacity_df.at[j, 'capacity']*0.9)
                             break
-
+                        elif newcapacity_df.at[i,'capacity'] > (capacity_df.at[j,'capacity']*1.25):
+                            newcapacity_df.at[i,'capacity'] = round(capacity_df.at[j, 'capacity']*1.1)
+                            break
+                        else:
+                            break
         else:
             #course is not hardcoded into the schedule
             if subjectCourse not in hardcoded_course_list:
