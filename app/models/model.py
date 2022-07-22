@@ -107,14 +107,15 @@ def model_predict(data,df):
 
     ml_results=ml_model.predict(df)
     
-    rgr_results_fall = predict_enrollment_year(rgr_model, 0, 2019)
-    rgr_results_spring = predict_enrollment_year(rgr_model, 1, 2019)
-    rgr_results_summer = predict_enrollment_year(rgr_model, 2, 2019)
+    rgr_results_fall = predict_enrollment_year(rgr_model, 0, 2022)
+    rgr_results_spring = predict_enrollment_year(rgr_model, 1, 2022)
+    rgr_results_summer = predict_enrollment_year(rgr_model, 2, 2022)
 
     newcapacity_df=DataFrame(data)
 
     input_course_list_size = len(ml_results)
     alpha_value = ((input_course_list_size/len(course_list))**2)*0.9
+    alpha_value = min(alpha_value, 0.9)
 
     for i in newcapacity_df.index:
         subjectCourse=str(newcapacity_df.at[i,'subject'] + newcapacity_df.at[i,'code'])
@@ -127,13 +128,13 @@ def model_predict(data,df):
                 if subjectCourse in rgr_model:
                     rgr_prediction = 0
                     if newcapacity_df.at[i,'semester'] == 'FALL':
-                        rgr_prediction = rgr_results_fall[subjectCourse]
+                        rgr_prediction = abs(round(rgr_results_fall[subjectCourse]))
                     elif newcapacity_df.at[i,'semester'] == 'SPRING':
-                        rgr_prediction = rgr_results_spring[subjectCourse]
-                    elif newcapacity_df.at[i,'semester'] == 'SUMMER':
-                        rgr_prediction = rgr_results_summer[subjectCourse]
+                        rgr_prediction = abs(round(rgr_results_spring[subjectCourse]))
+                    else:
+                        rgr_prediction = abs(round(rgr_results_summer[subjectCourse]))
 
-                    newcapacity_df.at[i,'capacity'] = abs(round((ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))))
+                    newcapacity_df.at[i,'capacity'] = (ml_prediction*alpha_value) + (rgr_prediction*(1-alpha_value))
                 else:
                     newcapacity_df.at[i,'capacity'] = ml_prediction
 
@@ -145,6 +146,7 @@ def model_predict(data,df):
                             newcapacity_df.at[i,'semester'] == capacity_df.at[j, 'semester']
                         ]):
                             newcapacity_df.at[i,'capacity'] = capacity_df.at[j, 'capacity']
+                            break
 
         else:
             #course is not hardcoded into the schedule
